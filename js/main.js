@@ -4,6 +4,16 @@
 
   document.documentElement.classList.remove("no-js");
 
+  /* When shown inside a preview frame, start each page at the top. */
+  if (window.self !== window.top && !window.location.hash) {
+    window.addEventListener("load", function () {
+      window.scrollTo(0, 0);
+      try {
+        document.body.scrollIntoView({ block: "start" });
+      } catch (e) {}
+    });
+  }
+
   /* Mobile navigation toggle */
   var toggle = document.querySelector(".nav-toggle");
   var nav = document.getElementById("site-nav");
