@@ -2,15 +2,7 @@
 <!-- Replace [DOMAIN] with your real domain before launch. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://[DOMAIN]/</loc>
-    <lastmod>2026-11-03</lastmod>
-  </url>
-  <url>
-    <loc>https://[DOMAIN]/car-insurance.html</loc>
-    <lastmod>2026-11-03</lastmod>
-  </url>
-  <url>
-    <loc>https://[DOMAIN]/home-insurance.html</loc>
+    <loc>https://[DOMAIN]/about.html</loc>
     <lastmod>2026-11-03</lastmod>
   </url>
   <url>
@@ -18,11 +10,27 @@
     <lastmod>2026-11-03</lastmod>
   </url>
   <url>
-    <loc>https://[DOMAIN]/guides/</loc>
+    <loc>https://[DOMAIN]/car-insurance.html</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
+    <loc>https://[DOMAIN]/contact.html</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
+    <loc>https://[DOMAIN]/do-not-sell.html</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
+    <loc>https://[DOMAIN]/glossary.html</loc>
     <lastmod>2026-11-03</lastmod>
   </url>
   <url>
     <loc>https://[DOMAIN]/guides/how-much-car-insurance-do-you-need.html</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
+    <loc>https://[DOMAIN]/guides/renters-insurance-basics.html</loc>
     <lastmod>2026-11-03</lastmod>
   </url>
   <url>
@@ -38,11 +46,35 @@
     <lastmod>2026-11-03</lastmod>
   </url>
   <url>
-    <loc>https://[DOMAIN]/about.html</loc>
+    <loc>https://[DOMAIN]/guides/what-is-full-coverage-car-insurance.html</loc>
     <lastmod>2026-11-03</lastmod>
   </url>
   <url>
-    <loc>https://[DOMAIN]/contact.html</loc>
+    <loc>https://[DOMAIN]/guides/how-to-file-a-car-insurance-claim.html</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
+    <loc>https://[DOMAIN]/guides/why-did-my-car-insurance-go-up.html</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
+    <loc>https://[DOMAIN]/guides/what-does-homeowners-insurance-cover.html</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
+    <loc>https://[DOMAIN]/guides/do-you-need-flood-insurance.html</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
+    <loc>https://[DOMAIN]/guides/</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
+    <loc>https://[DOMAIN]/home-insurance.html</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
+    <loc>https://[DOMAIN]/</loc>
     <lastmod>2026-11-03</lastmod>
   </url>
   <url>
@@ -51,10 +83,6 @@
   </url>
   <url>
     <loc>https://[DOMAIN]/terms.html</loc>
-    <lastmod>2026-11-03</lastmod>
-  </url>
-  <url>
-    <loc>https://[DOMAIN]/do-not-sell.html</loc>
     <lastmod>2026-11-03</lastmod>
   </url>
 </urlset>
