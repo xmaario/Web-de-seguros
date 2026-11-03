@@ -1,4 +1,4 @@
-/* [BRAND NAME] third-party integrations: Google AdSense and (optional) Google Analytics 4.
+/* PlainCover third-party integrations: Google AdSense and (optional) Google Analytics 4.
  *
  * Nothing loads until real IDs are configured, so the site works and stays fast before launch.
  *

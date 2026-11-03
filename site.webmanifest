@@ -1,6 +1,6 @@
 {
-  "name": "[BRAND NAME]",
-  "short_name": "[BRAND NAME]",
+  "name": "PlainCover",
+  "short_name": "PlainCover",
   "description": "Car and home insurance, explained simply.",
   "start_url": "/",
   "display": "standalone",

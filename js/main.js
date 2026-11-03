@@ -1,4 +1,4 @@
-/* [BRAND NAME] shared site script. No dependencies. */
+/* PlainCover shared site script. No dependencies. */
 (function () {
   "use strict";
 

@@ -3,7 +3,7 @@
 ## 1. Reemplazar marcadores (buscar y reemplazar en todo el proyecto)
 | Marcador | Qué poner |
 |---|---|
-| `[BRAND NAME]` | Nombre de la marca |
+| ~~`[BRAND NAME]`~~ | Hecho: PlainCover |
 | `[DOMAIN]` | Dominio sin `https://` (ej. `example.com`) |
 | `[CONTACT EMAIL]` | Email de contacto |
 | `[COMPANY LEGAL NAME]`, `[COMPANY ADDRESS]` | Empresa y dirección |
