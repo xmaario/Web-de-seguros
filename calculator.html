@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Car and Home Insurance Cost Estimator (Rough Estimate) | [BRAND NAME]</title>
+  <meta name="description" content="Get a rough, illustrative annual cost range for car or home insurance by state, age range and coverage level. Not a quote; actual prices vary by provider.">
+  <link rel="canonical" href="https://[DOMAIN]/calculator.html">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/main.js" defer></script>
+  <script src="js/calculator.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">[BRAND NAME]</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle-icon" aria-hidden="true"></span>
+        Menu
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="car-insurance.html">Car Insurance</a></li>
+          <li><a href="home-insurance.html">Home Insurance</a></li>
+          <li><a href="calculator.html" aria-current="page">Estimate Calculator</a></li>
+          <li><a href="guides/index.html">Guides</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+<div class="container prose">
+      <h1>Insurance cost estimator</h1>
+      <p class="lead">Answer a few general questions to see an illustrative annual price range. This tool uses simplified sample rates, not real insurer pricing. Actual premiums vary by state and provider and depend on many factors not asked here.</p>
+
+      <form id="estimate-form" class="form" novalidate>
+        <fieldset>
+          <legend>Type of insurance</legend>
+          <div class="radio-row">
+            <label class="radio"><input type="radio" name="type" value="car" checked> Car insurance</label>
+            <label class="radio"><input type="radio" name="type" value="home"> Home insurance</label>
+          </div>
+        </fieldset>
+
+        <div class="field">
+          <label for="state">State <span class="required">(required)</span></label>
+          <select id="state" name="state" required aria-describedby="state-error">
+            <option value="">Select your state</option>
+          </select>
+          <p class="field-error" id="state-error" hidden>Please select a state.</p>
+        </div>
+
+        <div class="field">
+          <label for="age">Age range <span class="required">(required)</span></label>
+          <select id="age" name="age" required aria-describedby="age-error">
+            <option value="">Select an age range</option>
+            <option value="18-24">18 to 24</option>
+            <option value="25-34">25 to 34</option>
+            <option value="35-49">35 to 49</option>
+            <option value="50-64">50 to 64</option>
+            <option value="65+">65 or older</option>
+          </select>
+          <p class="field-error" id="age-error" hidden>Please select an age range.</p>
+        </div>
+
+        <div class="field" data-for="car">
+          <label for="mileage">Annual mileage <span class="required">(required)</span></label>
+          <select id="mileage" name="mileage" aria-describedby="mileage-error">
+            <option value="">Select annual mileage</option>
+            <option value="low">Under 7,500 miles</option>
+            <option value="medium">7,500 to 12,000 miles</option>
+            <option value="high">12,001 to 18,000 miles</option>
+            <option value="very-high">More than 18,000 miles</option>
+          </select>
+          <p class="field-error" id="mileage-error" hidden>Please select your annual mileage.</p>
+        </div>
+
+        <div class="field" data-for="home" hidden>
+          <label for="homeValue">Estimated home rebuild value <span class="required">(required)</span></label>
+          <select id="homeValue" name="homeValue" aria-describedby="homeValue-error">
+            <option value="">Select a value bracket</option>
+            <option value="under-200k">Under $200,000</option>
+            <option value="200-400k">$200,000 to $400,000</option>
+            <option value="400-700k">$400,001 to $700,000</option>
+            <option value="700k-1m">$700,001 to $1,000,000</option>
+            <option value="over-1m">More than $1,000,000</option>
+          </select>
+          <p class="field-error" id="homeValue-error" hidden>Please select a home value bracket.</p>
+        </div>
+
+        <div class="field">
+          <label for="coverage">Coverage level <span class="required">(required)</span></label>
+          <select id="coverage" name="coverage" required aria-describedby="coverage-help coverage-error">
+            <option value="">Select a coverage level</option>
+            <option value="basic">Basic</option>
+            <option value="standard">Standard</option>
+            <option value="premium">Enhanced</option>
+          </select>
+          <p class="field-help" id="coverage-help">Basic is closer to minimum requirements; Enhanced means higher limits and more optional coverage.</p>
+          <p class="field-error" id="coverage-error" hidden>Please select a coverage level.</p>
+        </div>
+
+        <button class="button" type="submit">Show rough estimate</button>
+      </form>
+
+      <section id="estimate-result" class="result" aria-live="polite" tabindex="-1" hidden>
+        <h2>Rough estimate only, not a quote</h2>
+        <p class="result-range"><span id="result-low"></span> to <span id="result-high"></span> per year</p>
+        <p id="result-monthly"></p>
+        <p>This illustrative range is based on simplified sample rates and the few details you entered. It is not an offer of coverage. Your actual premium may be higher or lower and varies by state and provider. Only a licensed insurer can give you a quote.</p>
+        <p>Next step: request quotes from several providers, such as [CARRIER A], [CARRIER B], and [CARRIER C], using the same coverage choices so you can compare them fairly.</p>
+      </section>
+
+      <h2>How this estimate works</h2>
+      <p>The calculator starts from a sample base rate for each insurance type and adjusts it with simple multipliers for state, age range, mileage or home value, and coverage level. It then shows a range around that number to reflect how much prices can differ between providers. The sample figures are not taken from any insurer and are not actuarial data.</p>
+      <p>Real quotes consider many details this tool does not ask about, such as your driving or claims history, vehicle, home construction, ZIP code, and credit-based insurance score where permitted. Learn more in our <a href="car-insurance.html">car insurance</a> and <a href="home-insurance.html">home insurance</a> overviews.</p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="disclosure">[BRAND NAME] is not an insurance company or agency. We may receive compensation from partner providers, which can affect where and how products appear. Estimates are illustrative and not offers of coverage.</p>
+      <nav aria-label="Footer">
+        <ul class="footer-links">
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Use</a></li>
+          <li><a href="do-not-sell.html">Do Not Sell or Share My Personal Information</a></li>
+          <li><a href="sitemap.xml">Sitemap</a></li>
+        </ul>
+      </nav>
+      <p class="copyright">&copy; <span data-year>2026</span> [BRAND NAME]. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

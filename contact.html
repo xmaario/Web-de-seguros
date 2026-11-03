@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact Us | [BRAND NAME]</title>
+  <meta name="description" content="Contact [BRAND NAME] with questions, corrections, or feedback about our car and home insurance information. We cannot provide quotes or policy service.">
+  <link rel="canonical" href="https://[DOMAIN]/contact.html">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">[BRAND NAME]</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle-icon" aria-hidden="true"></span>
+        Menu
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="car-insurance.html">Car Insurance</a></li>
+          <li><a href="home-insurance.html">Home Insurance</a></li>
+          <li><a href="calculator.html">Estimate Calculator</a></li>
+          <li><a href="guides/index.html">Guides</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+<div class="container prose">
+      <h1>Contact us</h1>
+      <p class="lead">Have a question, correction, or feedback about our content? Send us a message using the form below or email <a href="mailto:[CONTACT EMAIL]">[CONTACT EMAIL]</a>.</p>
+      <p>Please note: we are not an insurance company or agency. We cannot provide quotes, make changes to a policy, or handle claims. For those requests, contact your insurer or agent directly. Do not include sensitive information such as Social Security numbers, policy numbers, or medical details in your message.</p>
+
+      <form id="contact-form" class="form" novalidate>
+        <div class="field">
+          <label for="name">Name <span class="required">(required)</span></label>
+          <input id="name" name="name" type="text" autocomplete="name" required aria-describedby="name-error">
+          <p class="field-error" id="name-error" hidden>Please enter your name.</p>
+        </div>
+        <div class="field">
+          <label for="email">Email address <span class="required">(required)</span></label>
+          <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-error">
+          <p class="field-error" id="email-error" hidden>Please enter a valid email address.</p>
+        </div>
+        <div class="field">
+          <label for="topic">Topic</label>
+          <select id="topic" name="topic">
+            <option value="general">General question</option>
+            <option value="correction">Content correction</option>
+            <option value="privacy">Privacy request</option>
+            <option value="partnership">Partnership inquiry</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="message">Message <span class="required">(required)</span></label>
+          <textarea id="message" name="message" rows="6" required aria-describedby="message-error"></textarea>
+          <p class="field-error" id="message-error" hidden>Please enter a message.</p>
+        </div>
+        <button class="button" type="submit">Send message</button>
+      </form>
+
+      <div id="contact-confirmation" class="confirmation" role="status" tabindex="-1" hidden>
+        <h2>Thank you</h2>
+        <p>Your message has been received on this page. <span class="placeholder">[PLACEHOLDER: This demo form does not send data anywhere. Connect it to a form service or backend before launch.]</span></p>
+        <p>If your request is urgent, email <a href="mailto:[CONTACT EMAIL]">[CONTACT EMAIL]</a>.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="disclosure">[BRAND NAME] is not an insurance company or agency. We may receive compensation from partner providers, which can affect where and how products appear. Estimates are illustrative and not offers of coverage.</p>
+      <nav aria-label="Footer">
+        <ul class="footer-links">
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Use</a></li>
+          <li><a href="do-not-sell.html">Do Not Sell or Share My Personal Information</a></li>
+          <li><a href="sitemap.xml">Sitemap</a></li>
+        </ul>
+      </nav>
+      <p class="copyright">&copy; <span data-year>2026</span> [BRAND NAME]. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
