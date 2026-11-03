@@ -1,4 +1,4 @@
-/* PlainCover shared site script. No dependencies. */
+/* CoverCompass shared site script. No dependencies. */
 (function () {
   "use strict";
 

@@ -1,6 +1,6 @@
 {
-  "name": "PlainCover",
-  "short_name": "PlainCover",
+  "name": "CoverCompass",
+  "short_name": "CoverCompass",
   "description": "Car and home insurance, explained simply.",
   "start_url": "/",
   "display": "standalone",
