@@ -46,23 +46,37 @@
   }
   window.SiteForms = { setFieldError: setFieldError };
 
-  /* Contact form: front-end confirmation only, nothing is sent. */
+  /* Contact form.
+   * Sends to the form service URL in the form's data-endpoint attribute (for example Formspree).
+   * If no endpoint is set, the form stays hidden and only the email option is shown. */
   var contactForm = document.getElementById("contact-form");
   var confirmation = document.getElementById("contact-confirmation");
+  var fallback = document.getElementById("contact-fallback");
+  var formError = document.getElementById("form-error");
 
   if (contactForm && confirmation) {
+    var endpoint = (contactForm.getAttribute("data-endpoint") || "").trim();
+
+    if (/^https:\/\//.test(endpoint)) {
+      contactForm.hidden = false;
+      contactForm.setAttribute("action", endpoint);
+      if (fallback) fallback.hidden = true;
+    }
+
     contactForm.addEventListener("submit", function (event) {
       event.preventDefault();
 
       var name = contactForm.elements.name;
       var email = contactForm.elements.email;
       var message = contactForm.elements.message;
+      var privacy = contactForm.elements.privacy_consent;
       var firstInvalid = null;
 
       var checks = [
         [name, name.value.trim() ? "" : "Please enter your name."],
         [email, /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim()) ? "" : "Please enter a valid email address."],
-        [message, message.value.trim() ? "" : "Please enter a message."]
+        [message, message.value.trim() ? "" : "Please enter a message."],
+        [privacy, privacy.checked ? "" : "Please confirm that you agree to the Privacy Policy."]
       ];
 
       checks.forEach(function (check) {
@@ -75,11 +89,31 @@
         return;
       }
 
-      // [PLACEHOLDER] Connect to a form service or backend before launch.
-      contactForm.reset();
-      contactForm.hidden = true;
-      confirmation.hidden = false;
-      confirmation.focus();
+      var button = contactForm.querySelector('button[type="submit"]');
+      button.disabled = true;
+      if (formError) formError.hidden = true;
+
+      fetch(endpoint, {
+        method: "POST",
+        body: new FormData(contactForm),
+        headers: { Accept: "application/json" }
+      })
+        .then(function (response) {
+          if (!response.ok) throw new Error("Request failed");
+          contactForm.reset();
+          contactForm.hidden = true;
+          confirmation.hidden = false;
+          confirmation.focus();
+        })
+        .catch(function () {
+          if (formError) {
+            formError.hidden = false;
+            formError.focus && formError.focus();
+          }
+        })
+        .then(function () {
+          button.disabled = false;
+        });
     });
   }
 })();

@@ -71,6 +71,28 @@ const GA_MEASUREMENT_ID = "";
     });
   }
 
+  /* ---------- "Privacy settings" buttons ----------
+   * Reopens Google's consent message (AdSense Privacy & messaging) so visitors can change their choice.
+   * Before AdSense is active, the button opens the cookie policy instead. */
+  var adsActive = /^ca-pub-\d{16}$/.test(client);
+  if (adsActive) {
+    window.googlefc = window.googlefc || {};
+    window.googlefc.callbackQueue = window.googlefc.callbackQueue || [];
+  }
+  document.addEventListener("click", function (event) {
+    var trigger = event.target.closest && event.target.closest("[data-privacy-settings]");
+    if (!trigger) return;
+    event.preventDefault();
+    if (adsActive) {
+      window.googlefc.callbackQueue.push(function () {
+        window.googlefc.showRevocationMessage();
+      });
+    } else {
+      var base = document.querySelector('link[rel="stylesheet"]').getAttribute("href").replace("css/styles.css", "");
+      window.location.href = base + "cookie-policy.html#manage";
+    }
+  });
+
   /* ---------- Google Analytics 4 (optional) ---------- */
   if (/^G-[A-Z0-9]+$/.test(GA_MEASUREMENT_ID)) {
     loadScript("https://www.googletagmanager.com/gtag/js?id=" + GA_MEASUREMENT_ID);
