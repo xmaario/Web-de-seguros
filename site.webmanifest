@@ -1,6 +1,6 @@
 {
-  "name": "CoverCompass",
-  "short_name": "CoverCompass",
+  "name": "Coverstead",
+  "short_name": "Coverstead",
   "description": "Car and home insurance, explained simply.",
   "start_url": "/",
   "display": "standalone",

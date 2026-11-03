@@ -1,4 +1,4 @@
-/* CoverCompass shared site script. No dependencies. */
+/* Coverstead shared site script. No dependencies. */
 (function () {
   "use strict";
 

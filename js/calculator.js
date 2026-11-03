@@ -1,4 +1,4 @@
-/* CoverCompass rough estimate calculator.
+/* Coverstead rough estimate calculator.
  *
  * IMPORTANT: Every number below is an ILLUSTRATIVE SAMPLE value for demonstration.
  * None of it is real insurer pricing or actuarial data. Results are labeled
