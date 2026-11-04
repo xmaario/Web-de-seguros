@@ -1,0 +1,76 @@
+title: Contact Us | UnpackInsurance
+description: Contact UnpackInsurance with questions, corrections, or feedback about our car and home insurance information. We cannot provide quotes or policy service.
+path: contact.html
+type: page
+---
+    <div class="container prose">
+      <h1>Contact us</h1>
+      <p class="lead">Have a question, correction, or feedback about our content? Send us a message or email <a href="mailto:unpackinsurance@gmail.com">unpackinsurance@gmail.com</a>.</p>
+      <p>Please note: we are not an insurance company or agency. We cannot provide quotes, make changes to a policy, or handle claims. For those requests, contact your insurer or agent directly. Do not include sensitive information such as Social Security numbers, policy numbers, or medical details in your message.</p>
+
+      <!-- Paste your form service endpoint (for example https://formspree.io/f/xxxxxxx) into data-endpoint.
+           While it is empty, the form stays hidden and visitors see the email option only. -->
+      <form id="contact-form" class="form" action="" method="post" data-endpoint="" novalidate hidden>
+        <div class="field">
+          <label for="name">Name <span class="required">(required)</span></label>
+          <input id="name" name="name" type="text" autocomplete="name" required aria-describedby="name-error">
+          <p class="field-error" id="name-error" hidden>Please enter your name.</p>
+        </div>
+        <div class="field">
+          <label for="email">Email address <span class="required">(required)</span></label>
+          <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-error">
+          <p class="field-error" id="email-error" hidden>Please enter a valid email address.</p>
+        </div>
+        <div class="field">
+          <label for="topic">Topic</label>
+          <select id="topic" name="topic">
+            <option value="general">General question</option>
+            <option value="correction">Content correction</option>
+            <option value="privacy">Privacy request</option>
+            <option value="advertising">Advertising inquiry</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="message">Message <span class="required">(required)</span></label>
+          <textarea id="message" name="message" rows="6" required aria-describedby="message-error"></textarea>
+          <p class="field-error" id="message-error" hidden>Please enter a message.</p>
+        </div>
+        <div class="field">
+          <div class="checkbox">
+            <input id="privacy" name="privacy_consent" type="checkbox" value="yes" required aria-describedby="privacy-error">
+            <label for="privacy">I have read the <a href="privacy-policy.html">Privacy Policy</a> and agree to UnpackInsurance processing my data to reply to my message.</label>
+          </div>
+          <p class="field-error" id="privacy-error" hidden>Please confirm that you agree to the Privacy Policy.</p>
+        </div>
+
+        <div class="data-notice">
+          <h2>Basic data protection information</h2>
+          <dl class="data-list">
+            <dt>Controller</dt>
+            <dd>Mario González Ordóñez</dd>
+            <dt>Purpose</dt>
+            <dd>To reply to your message.</dd>
+            <dt>Legal basis</dt>
+            <dd>Your consent.</dd>
+            <dt>Recipients</dt>
+            <dd>Formspree, Inc. as our service provider. Data may be transferred to the US with appropriate safeguards.</dd>
+            <dt>Your rights</dt>
+            <dd>Access, rectification, erasure, and other rights described in our <a href="privacy-policy.html">Privacy Policy</a>.</dd>
+          </dl>
+        </div>
+
+        <p class="field-error" id="form-error" role="alert" hidden>Sorry, your message could not be sent. Please try again or email <a href="mailto:unpackinsurance@gmail.com">unpackinsurance@gmail.com</a>.</p>
+        <button class="button" type="submit">Send message</button>
+      </form>
+
+      <div id="contact-fallback" class="confirmation">
+        <h2>Email us</h2>
+        <p>Write to <a href="mailto:unpackinsurance@gmail.com">unpackinsurance@gmail.com</a>. We usually reply within a few business days.</p>
+        <p>We use your email only to reply to you. See our <a href="privacy-policy.html">Privacy Policy</a>.</p>
+      </div>
+
+      <div id="contact-confirmation" class="confirmation" role="status" tabindex="-1" hidden>
+        <h2>Thank you</h2>
+        <p>Your message has been sent. We usually reply within a few business days.</p>
+      </div>
+    </div>

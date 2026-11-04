@@ -1,0 +1,27 @@
+# Site tools (not published)
+
+The website is plain static HTML in the repo root. These tools regenerate it from source fragments.
+This folder is excluded from the live site by `.assetsignore`.
+
+- `content/*.html` — one source fragment per page: a small header (`title`, `description`, `path`,
+  `type`, and for guides `category`, `date`, `related`), a `---` line, then the page body.
+- `build.py` — run `python3 tools/build.py` from the repo root. Writes every page, the shared header
+  and footer, SEO tags, structured data and `sitemap.xml`. Never edit the generated root HTML by hand.
+- `check.py` — run `python3 tools/check.py` after building. Must print "All checks passed."
+- `guide-topics.md` — backlog of future guides.
+
+## Adding a guide
+1. Copy an existing guide fragment (for example `content/guide-20.html`) to `content/guide-<next number>.html`.
+2. Update the header: `title` (ends with `| UnpackInsurance`, about 60 characters), `description`
+   (under 160 characters), `path: guides/<slug>.html`, `section: guides/index.html`, `type: article`,
+   `category: Car insurance` or `Home insurance`, `date: YYYY-MM-DD`, and `related:` with three existing guide paths.
+3. Write the body inside `<article class="container prose">`: one `<h1>`, a `lead` paragraph, `<h2>` sections,
+   a "The bottom line" section, and a closing `<p class="note">` disclaimer.
+4. Run `python3 tools/build.py` then `python3 tools/check.py`.
+
+## Content rules
+- US English, original text, 800 to 1,000 words per guide.
+- No real insurance company names, logos or implied partnerships.
+- No invented reviews, testimonials, ratings, statistics or savings claims. No promised prices.
+- Use "may", "often", "varies by state and provider". General information, not advice.
+- Only state facts you are confident are accurate and current; otherwise keep the wording general.
