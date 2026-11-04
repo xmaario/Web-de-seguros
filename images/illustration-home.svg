@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" role="img" aria-hidden="true">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#eaf2ff"/><stop offset="1" stop-color="#fdeef4"/></linearGradient>
+    <linearGradient id="roof" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#0071e3"/><stop offset="1" stop-color="#8a3ffc"/></linearGradient>
+    <linearGradient id="sh" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8a3ffc"/><stop offset="1" stop-color="#d6336c"/></linearGradient>
+  </defs>
+  <rect width="1200" height="360" fill="url(#bg)"/>
+  <circle cx="1060" cy="80" r="100" fill="#ffffff" opacity=".55"/>
+  <circle cx="120" cy="310" r="130" fill="#ffffff" opacity=".5"/>
+  <g transform="translate(150 50)" fill="#ffffff" opacity=".9">
+    <ellipse cx="80" cy="50" rx="80" ry="34"/><ellipse cx="140" cy="36" rx="60" ry="36"/><ellipse cx="190" cy="56" rx="56" ry="28"/>
+  </g>
+  <g stroke="#0071e3" stroke-width="6" stroke-linecap="round" opacity=".35"><line x1="200" y1="130" x2="190" y2="160"/><line x1="250" y1="130" x2="240" y2="160"/><line x1="300" y1="130" x2="290" y2="160"/></g>
+  <rect x="0" y="300" width="1200" height="60" fill="#e4ebf7"/>
+  <g transform="translate(440 70)">
+    <rect x="40" y="110" width="280" height="122" rx="8" fill="#ffffff"/>
+    <path d="M0 126 L180 0 L360 126 Q366 136 354 140 H6 Q-6 136 0 126 Z" fill="url(#roof)"/>
+    <rect x="150" y="160" width="60" height="72" rx="6" fill="#0071e3"/>
+    <rect x="72" y="156" width="52" height="44" rx="6" fill="#cfe0fb"/>
+    <rect x="236" y="156" width="52" height="44" rx="6" fill="#cfe0fb"/>
+    <rect x="262" y="34" width="30" height="56" rx="4" fill="#5e5e63"/>
+  </g>
+  <g transform="translate(880 90)">
+    <path d="M80 0 L160 28 V86 C160 136 126 172 80 186 C34 172 0 136 0 86 V28 Z" fill="url(#sh)"/>
+    <path d="M46 92 L72 118 L118 70" fill="none" stroke="#ffffff" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <g fill="#8a3ffc" opacity=".25"><circle cx="820" cy="60" r="9"/><circle cx="390" cy="260" r="7"/><circle cx="1110" cy="250" r="10"/></g>
+</svg>

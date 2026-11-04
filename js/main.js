@@ -56,6 +56,31 @@
   }
   window.SiteForms = { setFieldError: setFieldError };
 
+
+  /* Guide search on the guides page: filters the cards as you type. */
+  var searchInput = document.getElementById("guide-search-input");
+  if (searchInput) {
+    var cards = Array.prototype.slice.call(document.querySelectorAll(".page-collection .card"));
+    var headings = Array.prototype.slice.call(document.querySelectorAll(".page-collection h2.section-title"));
+    var status = document.getElementById("guide-search-status");
+    searchInput.addEventListener("input", function () {
+      var q = searchInput.value.trim().toLowerCase();
+      var shown = 0;
+      cards.forEach(function (card) {
+        var match = !q || card.textContent.toLowerCase().indexOf(q) !== -1;
+        card.hidden = !match;
+        if (match) shown++;
+      });
+      headings.forEach(function (h) {
+        var grid = h.nextElementSibling;
+        var any = grid && grid.querySelector(".card:not([hidden])");
+        h.hidden = !any;
+        if (grid) grid.hidden = !any;
+      });
+      status.textContent = q ? (shown ? shown + (shown === 1 ? " guide found" : " guides found") : "No guides match. Try another word.") : "";
+    });
+  }
+
   /* Contact form.
    * Sends to the form service URL in the form's data-endpoint attribute (for example Formspree).
    * If no endpoint is set, the form stays hidden and only the email option is shown. */

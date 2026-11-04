@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" role="img" aria-hidden="true">
+  <defs>
+    <linearGradient id="a" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0071e3"/><stop offset="1" stop-color="#8a3ffc"/></linearGradient>
+    <linearGradient id="b" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8a3ffc"/><stop offset="1" stop-color="#d6336c"/></linearGradient>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#eef4ff"/><stop offset="1" stop-color="#f6efff"/></linearGradient>
+  </defs>
+  <rect width="960" height="420" rx="36" fill="url(#bg)"/>
+  <circle cx="120" cy="90" r="70" fill="#ffffff" opacity=".6"/>
+  <circle cx="860" cy="340" r="90" fill="#ffffff" opacity=".6"/>
+  <!-- policy document, opened -->
+  <g transform="translate(330 70)">
+    <rect x="0" y="0" width="300" height="290" rx="22" fill="#ffffff"/>
+    <rect x="34" y="40" width="150" height="18" rx="9" fill="url(#a)"/>
+    <rect x="34" y="84" width="232" height="12" rx="6" fill="#e3e8f2"/>
+    <rect x="34" y="110" width="210" height="12" rx="6" fill="#e3e8f2"/>
+    <rect x="34" y="136" width="222" height="12" rx="6" fill="#e3e8f2"/>
+    <rect x="34" y="174" width="232" height="70" rx="14" fill="#f2f6ff"/>
+    <path d="M58 210 L76 228 L108 194" fill="none" stroke="#0071e3" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="128" y="196" width="112" height="12" rx="6" fill="#c9d8f5"/>
+    <rect x="128" y="216" width="80" height="10" rx="5" fill="#dde6f7"/>
+  </g>
+  <!-- car -->
+  <g transform="translate(70 230)">
+    <path d="M20 70 L42 30 Q48 20 62 20 H170 Q184 20 192 30 L216 70 Q240 74 244 86 V100 Q244 108 236 108 H8 Q0 108 0 100 V88 Q2 74 20 70 Z" fill="url(#a)"/>
+    <path d="M58 66 L70 40 Q73 34 80 34 H112 V66 Z M124 34 H160 Q167 34 171 40 L186 66 H124 Z" fill="#ffffff" opacity=".9"/>
+    <circle cx="58" cy="108" r="22" fill="#1d1d1f"/><circle cx="58" cy="108" r="9" fill="#e3e8f2"/>
+    <circle cx="190" cy="108" r="22" fill="#1d1d1f"/><circle cx="190" cy="108" r="9" fill="#e3e8f2"/>
+  </g>
+  <!-- house -->
+  <g transform="translate(680 180)">
+    <rect x="22" y="70" width="176" height="96" rx="8" fill="#ffffff"/>
+    <path d="M0 80 L110 0 L220 80 Q224 88 216 90 H4 Q-4 88 0 80 Z" fill="url(#a)"/>
+    <rect x="90" y="106" width="40" height="60" rx="5" fill="#0071e3"/>
+    <rect x="40" y="100" width="34" height="30" rx="5" fill="#cfe0fb"/>
+    <rect x="146" y="100" width="34" height="30" rx="5" fill="#cfe0fb"/>
+  </g>
+  <!-- shield -->
+  <g transform="translate(560 30)">
+    <path d="M60 0 L120 22 V66 C120 104 94 130 60 140 C26 130 0 104 0 66 V22 Z" fill="url(#b)"/>
+    <path d="M34 70 L54 90 L88 54" fill="none" stroke="#ffffff" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <g fill="#0071e3" opacity=".22"><circle cx="270" cy="70" r="10"/><circle cx="700" cy="120" r="7"/><circle cx="250" cy="200" r="6"/></g>
+</svg>

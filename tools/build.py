@@ -36,6 +36,8 @@ LOGO_SVG = ('<svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true" focu
             '<path d="M9 15.5h14V24H9z M9 15.5L6.5 11h7l2.5 4.5 2.5-4.5h7L23 15.5" fill="none" stroke="#fff" '
             'stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/></svg>')
 
+ART = {"Car insurance": "images/illustration-car.svg", "Home insurance": "images/illustration-home.svg"}
+
 CUR = ' aria-current="page"'
 
 AD_SLOT = ('<aside class="ad-slot" data-ad-key="{key}" aria-label="Advertisement" hidden>'
@@ -220,13 +222,50 @@ def article_body(meta, body, prefix):
               f'<span aria-hidden="true">·</span> {read_time(meta)} min read</p>')
     body = body.replace("</h1>", "</h1>" + byline, 1)
 
+    # Section ids for the table of contents
+    toc, used = [], set()
+
+    def add_id(m):
+        text = m.group(1)
+        plain = re.sub("<[^>]+>", "", text)
+        slug = re.sub(r"[^a-z0-9]+", "-", html.unescape(plain).lower()).strip("-") or "section"
+        base, n = slug, 2
+        while slug in used:
+            slug, n = f"{base}-{n}", n + 1
+        used.add(slug)
+        toc.append((slug, plain))
+        return f'<h2 id="{slug}">{text}</h2>'
+
+    body = re.sub(r"<h2>(.*?)</h2>", add_id, body)
+
+    # Illustration, key takeaways and table of contents after the lead paragraph
+    art = ART.get(meta.get("category"))
+    extras = ""
+    takeaways = [x.strip() for x in meta.get("takeaways", "").split("|") if x.strip()]
+    if takeaways:
+        items = "\n".join(f"          <li>{x}</li>" for x in takeaways)
+        extras += ('\n      <aside class="takeaways" aria-labelledby="takeaways-h">\n'
+                   '        <h2 class="takeaways-title" id="takeaways-h">Key takeaways</h2>\n'
+                   f'        <ul>\n{items}\n        </ul>\n      </aside>')
+    if len(toc) >= 4:
+        items = "\n".join(f'          <li><a href="#{i}">{txt}</a></li>' for i, txt in toc)
+        extras += ('\n      <nav class="toc" aria-labelledby="toc-h">\n'
+                   '        <h2 class="toc-title" id="toc-h">On this page</h2>\n'
+                   f'        <ol>\n{items}\n        </ol>\n      </nav>')
+    m = re.search(r'<p class="lead">.*?</p>', body, re.S)
+    if m:
+        figure = ""
+        if art:
+            figure = f'<img class="guide-art" src="{rel(prefix, art)}" alt="" width="1200" height="360">\n      '
+        body = body[:m.start()] + figure + m.group(0) + extras + body[m.end():]
+
     # Ad slots: before the 3rd H2 and before "The bottom line".
-    h2s = [m.start() for m in re.finditer(r"\n      <h2>", body)]
+    h2s = [m.start() for m in re.finditer(r"\n      <h2 id=", body)]
     if len(h2s) >= 3:
         i = h2s[2]
         body = body[:i] + "\n      " + AD_SLOT.format(key="inArticle") + body[i:]
-    body = body.replace("\n      <h2>The bottom line</h2>",
-                        "\n      " + AD_SLOT.format(key="inArticle2") + "\n      <h2>The bottom line</h2>", 1)
+    body = body.replace('\n      <h2 id="the-bottom-line">',
+                        "\n      " + AD_SLOT.format(key="inArticle2") + '\n      <h2 id="the-bottom-line">', 1)
 
     related = [by_path[p.strip()] for p in meta.get("related", "").split(",") if p.strip()]
     if related:

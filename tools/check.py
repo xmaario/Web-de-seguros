@@ -41,7 +41,10 @@ for title, files in titles.items():
 
 # Word count for guides (800-1000 words, excluding the closing note)
 for f in sorted(glob.glob("tools/content/guide-*.html")):
-    body = open(f, encoding="utf-8").read().split("\n---\n", 1)[1]
+    head, body = open(f, encoding="utf-8").read().split("\n---\n", 1)
+    tk = re.search(r"^takeaways: (.+)$", head, re.M)
+    if not tk or not 3 <= len([x for x in tk.group(1).split("|") if x.strip()]) <= 4:
+        errors.append(f"{f}: needs 'takeaways:' with 3 or 4 points separated by ' | '")
     body = re.sub(r'<p class="note">.*?</p>', "", body, flags=re.S)
     words = len(re.sub("<[^>]+>", " ", body).split())
     if not 800 <= words <= 1000:
