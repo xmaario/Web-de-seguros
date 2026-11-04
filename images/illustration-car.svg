@@ -9,13 +9,20 @@
   <circle cx="1080" cy="300" r="120" fill="#ffffff" opacity=".5"/>
   <rect x="0" y="292" width="1200" height="68" fill="#dfe7f5"/>
   <g fill="#ffffff"><rect x="60" y="322" width="110" height="10" rx="5"/><rect x="250" y="322" width="110" height="10" rx="5"/><rect x="440" y="322" width="110" height="10" rx="5"/><rect x="630" y="322" width="110" height="10" rx="5"/><rect x="820" y="322" width="110" height="10" rx="5"/><rect x="1010" y="322" width="110" height="10" rx="5"/></g>
-  <g transform="translate(330 110)">
-    <path d="M40 150 L80 70 Q92 46 120 46 H330 Q358 46 372 70 L420 150 Q470 156 480 180 V210 Q480 226 464 226 H16 Q0 226 0 210 V184 Q4 156 40 150 Z" fill="url(#car)"/>
-    <path d="M110 140 L134 86 Q140 74 154 74 H222 V140 Z" fill="#ffffff" opacity=".9"/>
-    <path d="M244 74 H320 Q334 74 342 86 L374 140 H244 Z" fill="#ffffff" opacity=".9"/>
-    <circle cx="110" cy="226" r="44" fill="#1d1d1f"/><circle cx="110" cy="226" r="18" fill="#dfe7f5"/>
-    <circle cx="380" cy="226" r="44" fill="#1d1d1f"/><circle cx="380" cy="226" r="18" fill="#dfe7f5"/>
-    <rect x="440" y="170" width="30" height="14" rx="7" fill="#ffd166"/>
+  <g transform="translate(330 84) scale(1.85)">
+    <g id="car-shape">
+    <ellipse cx="132" cy="112" rx="118" ry="6" fill="#1d1d1f" opacity=".12"/>
+    <path d="M14 80 C14 68 22 62 36 60 L74 55 L100 32 C106 27 113 24 122 24 H170 C180 24 188 28 195 35 L216 56 L236 60 C247 62 252 69 252 78 V88 C252 93 249 96 244 96 H20 C16 96 14 93 14 89 Z" fill="url(#car)"/>
+    <path d="M104 54 L120 37 C123 34 126 33 130 33 H148 V54 Z" fill="#ffffff" opacity=".92"/>
+    <path d="M156 33 H170 C176 33 181 35 185 39 L200 54 H156 Z" fill="#ffffff" opacity=".92"/>
+    <path d="M152 58 V90" stroke="#ffffff" stroke-opacity=".35" stroke-width="2"/>
+    <rect x="240" y="66" width="10" height="7" rx="3.5" fill="#ffd166"/>
+    <rect x="15" y="66" width="8" height="7" rx="3.5" fill="#ff6b6b"/>
+    <rect x="128" y="64" width="14" height="3.5" rx="1.75" fill="#ffffff" opacity=".6"/>
+    <rect x="166" y="64" width="14" height="3.5" rx="1.75" fill="#ffffff" opacity=".6"/>
+    <circle cx="64" cy="94" r="19" fill="#1d1d1f"/><circle cx="64" cy="94" r="8" fill="#d9e1ee"/>
+    <circle cx="204" cy="94" r="19" fill="#1d1d1f"/><circle cx="204" cy="94" r="8" fill="#d9e1ee"/>
+  </g>
   </g>
   <g transform="translate(860 60)">
     <path d="M90 0 L180 32 V96 C180 152 142 194 90 210 C38 194 0 152 0 96 V32 Z" fill="url(#sh)"/>

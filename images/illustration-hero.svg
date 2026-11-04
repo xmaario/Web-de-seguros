@@ -6,7 +6,7 @@
   </defs>
   <rect width="960" height="420" rx="36" fill="url(#bg)"/>
   <circle cx="120" cy="90" r="70" fill="#ffffff" opacity=".6"/>
-  <circle cx="860" cy="340" r="90" fill="#ffffff" opacity=".6"/>
+  <circle cx="900" cy="60" r="70" fill="#ffffff" opacity=".6"/>
   <!-- policy document, opened -->
   <g transform="translate(330 70)">
     <rect x="0" y="0" width="300" height="290" rx="22" fill="#ffffff"/>
@@ -20,11 +20,20 @@
     <rect x="128" y="216" width="80" height="10" rx="5" fill="#dde6f7"/>
   </g>
   <!-- car -->
-  <g transform="translate(70 230)">
-    <path d="M20 70 L42 30 Q48 20 62 20 H170 Q184 20 192 30 L216 70 Q240 74 244 86 V100 Q244 108 236 108 H8 Q0 108 0 100 V88 Q2 74 20 70 Z" fill="url(#a)"/>
-    <path d="M58 66 L70 40 Q73 34 80 34 H112 V66 Z M124 34 H160 Q167 34 171 40 L186 66 H124 Z" fill="#ffffff" opacity=".9"/>
-    <circle cx="58" cy="108" r="22" fill="#1d1d1f"/><circle cx="58" cy="108" r="9" fill="#e3e8f2"/>
-    <circle cx="190" cy="108" r="22" fill="#1d1d1f"/><circle cx="190" cy="108" r="9" fill="#e3e8f2"/>
+  <g transform="translate(40 228)">
+    <g id="car-shape">
+    <ellipse cx="132" cy="112" rx="118" ry="6" fill="#1d1d1f" opacity=".12"/>
+    <path d="M14 80 C14 68 22 62 36 60 L74 55 L100 32 C106 27 113 24 122 24 H170 C180 24 188 28 195 35 L216 56 L236 60 C247 62 252 69 252 78 V88 C252 93 249 96 244 96 H20 C16 96 14 93 14 89 Z" fill="url(#a)"/>
+    <path d="M104 54 L120 37 C123 34 126 33 130 33 H148 V54 Z" fill="#ffffff" opacity=".92"/>
+    <path d="M156 33 H170 C176 33 181 35 185 39 L200 54 H156 Z" fill="#ffffff" opacity=".92"/>
+    <path d="M152 58 V90" stroke="#ffffff" stroke-opacity=".35" stroke-width="2"/>
+    <rect x="240" y="66" width="10" height="7" rx="3.5" fill="#ffd166"/>
+    <rect x="15" y="66" width="8" height="7" rx="3.5" fill="#ff6b6b"/>
+    <rect x="128" y="64" width="14" height="3.5" rx="1.75" fill="#ffffff" opacity=".6"/>
+    <rect x="166" y="64" width="14" height="3.5" rx="1.75" fill="#ffffff" opacity=".6"/>
+    <circle cx="64" cy="94" r="19" fill="#1d1d1f"/><circle cx="64" cy="94" r="8" fill="#d9e1ee"/>
+    <circle cx="204" cy="94" r="19" fill="#1d1d1f"/><circle cx="204" cy="94" r="8" fill="#d9e1ee"/>
+  </g>
   </g>
   <!-- house -->
   <g transform="translate(680 180)">

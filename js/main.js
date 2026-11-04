@@ -57,6 +57,52 @@
   window.SiteForms = { setFieldError: setFieldError };
 
 
+
+  /* Header shadow once the page is scrolled */
+  var header = document.querySelector(".site-header");
+  if (header) {
+    var onScroll = function () {
+      header.classList.toggle("is-scrolled", window.scrollY > 8);
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+  }
+
+  /* Gentle fade-in of sections as they scroll into view */
+  var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (!reduceMotion && "IntersectionObserver" in window) {
+    var targets = document.querySelectorAll(
+      ".tile, .trust-item, .steps li, .card, .section-title, .section-sub, .takeaways, .toc, .guide-art, .related h2, .glossary dt, .form, .result"
+    );
+    if (targets.length) {
+      document.documentElement.classList.add("js-anim");
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            var el = entry.target;
+            el.classList.add("is-visible");
+            observer.unobserve(el);
+            /* Once shown, drop the animation classes so hover effects work normally */
+            window.setTimeout(function () {
+              el.classList.remove("reveal", "is-visible");
+              el.style.removeProperty("--reveal-delay");
+            }, 1300);
+          }
+        });
+      }, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
+      Array.prototype.forEach.call(targets, function (el) {
+        var siblings = el.parentElement ? Array.prototype.indexOf.call(el.parentElement.children, el) : 0;
+        el.style.setProperty("--reveal-delay", Math.min(siblings, 5) * 0.07 + "s");
+        el.classList.add("reveal");
+        observer.observe(el);
+      });
+      /* Never hide content when printing */
+      window.addEventListener("beforeprint", function () {
+        document.documentElement.classList.remove("js-anim");
+      });
+    }
+  }
+
   /* Guide search on the guides page: filters the cards as you type. */
   var searchInput = document.getElementById("guide-search-input");
   if (searchInput) {
