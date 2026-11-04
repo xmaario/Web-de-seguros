@@ -37,22 +37,16 @@ Los ingresos de AdSense son una actividad económica.
 ## Paso 4. Rellenar todos los marcadores
 Haz buscar y reemplazar en todo el proyecto. Para encontrarlos: `grep -rn "\[[A-Z]" .`
 
-| Marcador | Qué poner |
+| Dato | Estado |
 |---|---|
-| `[OWNER NAME]` | Tu nombre y apellidos completos (o la razón social si creas una S.L.) |
-| `[NIF]` | Tu NIF (o el CIF de la sociedad) |
-| `[POSTAL ADDRESS]` | Dirección postal. La LSSI exige un domicilio; si no quieres publicar tu casa, consulta con el abogado si puedes usar un domicilio profesional |
-| `[CITY]` | Ciudad para la cláusula de tribunales (aviso legal y términos) |
-| `[CONTACT EMAIL]` | Tu email de contacto |
-| ~~`unpackinsurance.com`~~ | Hecho: `unpackinsurance.com` |
-| `[EFFECTIVE DATE]` | Fecha de publicación de los textos legales |
-| `[HOSTING PROVIDER]` | Por ejemplo "Cloudflare, Inc." o "Netlify, Inc." |
-| `[FORM PROVIDER]` | Por ejemplo "Formspree, Inc." (o quita esa línea si no usas el formulario) |
-| `[LOG RETENTION, e.g. 30 days]`, `[ANALYTICS RETENTION, e.g. 14 months]` | Los plazos reales de tus proveedores |
-| `[CARRIER A]`, `[CARRIER B]`, `[CARRIER C]` | Cámbialo por texto genérico ("several providers") mientras no tengas acuerdos con aseguradoras |
-| `ca-pub-XXXXXXXXXXXXXXXX` | Tu ID de editor de AdSense (en todos los HTML) |
-| `pub-XXXXXXXXXXXXXXXX` | El mismo ID en `ads.txt` |
-| Bloques `[PLACEHOLDER: …]` y la caja amarilla de privacidad | Bórralos cuando hayas completado lo que indican |
+| Nombre de la marca | ✅ UnpackInsurance |
+| Dominio | ✅ unpackinsurance.com |
+| Titular, NIF, domicilio, ciudad | ✅ Rellenados (aviso legal, privacidad, términos, contacto) |
+| Email de contacto | ✅ unpackinsurance@gmail.com |
+| Fecha de los textos legales | ✅ November 4, 2026 |
+| Hosting | ✅ Cloudflare, Inc. (Cloudflare Pages) |
+| Aseguradoras de ejemplo | ✅ Sustituidas por texto genérico |
+| `ca-pub-XXXXXXXXXXXXXXXX` (todas las páginas) y `pub-XXXXXXXXXXXXXXXX` (`ads.txt`) | ⏳ Pendiente: tu ID de AdSense cuando te aprueben |
 
 ## Paso 5. Formulario de contacto
 - Mientras `data-endpoint` esté vacío en `contact.html`, el formulario no se muestra y la página solo ofrece el email. Esto ya es correcto legalmente.
