@@ -209,6 +209,24 @@ def jsonld(meta):
             "isPartOf": {"@type": "WebSite", "name": BRAND, "url": SITE + "/"},
             "inLanguage": "en-US",
         })
+    if t == "glossary":
+        terms = re.findall(r'<dt id="([^"]+)">(.*?)</dt>\s*<dd>(.*?)</dd>', meta["body"], re.S)
+        graph.append({
+            "@type": "DefinedTermSet",
+            "@id": canonical(meta["path"]) + "#terms",
+            "name": meta["h1"],
+            "url": canonical(meta["path"]),
+            "hasDefinedTerm": [
+                {
+                    "@type": "DefinedTerm",
+                    "name": html.unescape(re.sub("<[^>]+>", "", name)).strip(),
+                    "description": html.unescape(re.sub(r"\s+", " ", re.sub("<[^>]+>", "", desc))).strip(),
+                    "url": canonical(meta["path"]) + "#" + tid,
+                    "inDefinedTermSet": canonical(meta["path"]) + "#terms",
+                }
+                for tid, name, desc in terms
+            ],
+        })
     if t != "home":
         graph.append({
             "@type": "BreadcrumbList",
