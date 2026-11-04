@@ -1,6 +1,6 @@
 {
-  "name": "Coverstead",
-  "short_name": "Coverstead",
+  "name": "UnpackInsurance",
+  "short_name": "UnpackInsurance",
   "description": "Car and home insurance, explained simply.",
   "start_url": "/",
   "display": "standalone",

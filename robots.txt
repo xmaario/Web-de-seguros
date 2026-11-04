@@ -1,5 +1,4 @@
-# Replace [DOMAIN] with your real domain before launch.
 User-agent: *
 Allow: /
 
-Sitemap: https://[DOMAIN]/sitemap.xml
+Sitemap: https://unpackinsurance.com/sitemap.xml

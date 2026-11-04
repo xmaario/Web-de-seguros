@@ -1,12 +1,12 @@
-# Coverstead: guía de lanzamiento paso a paso (titular residente en España)
+# UnpackInsurance: guía de lanzamiento paso a paso (titular residente en España)
 
 > Orientación práctica, no asesoramiento legal ni fiscal. Confirma los puntos fiscales con un gestor y los legales con un abogado.
 
 ---
 
 ## Paso 1. Comprobar y asegurar el nombre
-1. Busca `coverstead.com` en Namecheap, Cloudflare Registrar o Porkbun. Si está libre, cómpralo (unos 10–15 €/año).
-2. Busca "coverstead" y "cover stead" en https://tmsearch.uspto.gov (EE. UU.). Revisa sobre todo la clase 36 (seguros y finanzas).
+1. Busca `unpackinsurance.com` en Namecheap, Cloudflare Registrar o Porkbun. Si está libre, cómpralo (unos 10–15 €/año).
+2. Busca "unpackinsurance" y "unpack insurance" en https://tmsearch.uspto.gov (EE. UU.). Revisa sobre todo la clase 36 (seguros y finanzas).
 3. Opcional: busca también en EUIPO (https://euipo.europa.eu/eSearch) y en la OEPM.
 4. Opcional, cuando haya ingresos: registrar tu propia marca en la OEPM o la EUIPO.
 
@@ -29,7 +29,7 @@ Los ingresos de AdSense son una actividad económica.
    - **Cloudflare Pages** o **Netlify**: conecta el repo de GitHub, sin comando de build, directorio `/`.
    - Ambos sirven `404.html` automáticamente.
 2. Apunta el dominio al hosting y comprueba que carga con `https://`.
-3. Email con tu dominio, por ejemplo `hello@coverstead.com`:
+3. Email con tu dominio, por ejemplo `hello@unpackinsurance.com`:
    - Cloudflare Email Routing (gratis, reenvía a tu Gmail)
    - Zoho Mail o Google Workspace
 4. Acepta el acuerdo de tratamiento de datos (DPA) del hosting. Suele estar en sus términos o en el panel.
@@ -44,7 +44,7 @@ Haz buscar y reemplazar en todo el proyecto. Para encontrarlos: `grep -rn "\[[A-
 | `[POSTAL ADDRESS]` | Dirección postal. La LSSI exige un domicilio; si no quieres publicar tu casa, consulta con el abogado si puedes usar un domicilio profesional |
 | `[CITY]` | Ciudad para la cláusula de tribunales (aviso legal y términos) |
 | `[CONTACT EMAIL]` | Tu email de contacto |
-| `[DOMAIN]` | `coverstead.com` (sin `https://`) |
+| ~~`unpackinsurance.com`~~ | Hecho: `unpackinsurance.com` |
 | `[EFFECTIVE DATE]` | Fecha de publicación de los textos legales |
 | `[HOSTING PROVIDER]` | Por ejemplo "Cloudflare, Inc." o "Netlify, Inc." |
 | `[FORM PROVIDER]` | Por ejemplo "Formspree, Inc." (o quita esa línea si no usas el formulario) |
@@ -73,8 +73,8 @@ Haz buscar y reemplazar en todo el proyecto. Para encontrarlos: `grep -rn "\[[A-
    - no quedan marcadores visibles en la web;
    - el dominio es propio y carga con HTTPS;
    - eres mayor de 18 años.
-2. AdSense → **Sites** → añade `coverstead.com`. Para verificar el sitio elige el método **"Meta tag"**: la etiqueta ya está en todas las páginas, solo tienes que poner tu ID.
-3. Publica `ads.txt` con tu ID y comprueba que abre en `https://coverstead.com/ads.txt`.
+2. AdSense → **Sites** → añade `unpackinsurance.com`. Para verificar el sitio elige el método **"Meta tag"**: la etiqueta ya está en todas las páginas, solo tienes que poner tu ID.
+3. Publica `ads.txt` con tu ID y comprueba que abre en `https://unpackinsurance.com/ads.txt`.
 4. **Privacy & messaging** (imprescindible en España):
    - Crea el mensaje **"European regulations"** (RGPD) para EEE, Reino Unido y Suiza. Activa el botón **"Do not consent"**: la AEPD exige que rechazar sea tan fácil como aceptar.
    - Crea el mensaje **"US state regulations"** para las leyes de privacidad de EE. UU.
@@ -89,7 +89,7 @@ Haz buscar y reemplazar en todo el proyecto. Para encontrarlos: `grep -rn "\[[A-
 7. Nunca hagas clic en tus propios anuncios ni pidas a otros que lo hagan. Es la causa más común de cierre de cuentas.
 
 ## Paso 8. SEO y tráfico orgánico
-1. **Google Search Console**: verifica el dominio por DNS y envía `https://coverstead.com/sitemap.xml`.
+1. **Google Search Console**: verifica el dominio por DNS y envía `https://unpackinsurance.com/sitemap.xml`.
 2. **Bing Webmaster Tools**: importa la configuración desde Search Console.
 3. Prueba una guía en el **Rich Results Test** de Google.
 4. Opcional, **Google Analytics 4**:

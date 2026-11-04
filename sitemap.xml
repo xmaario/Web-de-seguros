@@ -1,96 +1,95 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Replace [DOMAIN] with your real domain before launch. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://[DOMAIN]/about.html</loc>
+    <loc>https://unpackinsurance.com/about.html</loc>
     <lastmod>2026-11-03</lastmod>
   </url>
   <url>
-    <loc>https://[DOMAIN]/calculator.html</loc>
+    <loc>https://unpackinsurance.com/calculator.html</loc>
     <lastmod>2026-11-03</lastmod>
   </url>
   <url>
-    <loc>https://[DOMAIN]/car-insurance.html</loc>
+    <loc>https://unpackinsurance.com/car-insurance.html</loc>
     <lastmod>2026-11-03</lastmod>
   </url>
   <url>
-    <loc>https://[DOMAIN]/contact.html</loc>
+    <loc>https://unpackinsurance.com/contact.html</loc>
     <lastmod>2026-11-03</lastmod>
   </url>
   <url>
-    <loc>https://[DOMAIN]/cookie-policy.html</loc>
+    <loc>https://unpackinsurance.com/cookie-policy.html</loc>
     <lastmod>2026-11-03</lastmod>
   </url>
   <url>
-    <loc>https://[DOMAIN]/do-not-sell.html</loc>
+    <loc>https://unpackinsurance.com/do-not-sell.html</loc>
     <lastmod>2026-11-03</lastmod>
   </url>
   <url>
-    <loc>https://[DOMAIN]/glossary.html</loc>
+    <loc>https://unpackinsurance.com/glossary.html</loc>
     <lastmod>2026-11-03</lastmod>
   </url>
   <url>
-    <loc>https://[DOMAIN]/guides/how-much-car-insurance-do-you-need.html</loc>
+    <loc>https://unpackinsurance.com/guides/how-much-car-insurance-do-you-need.html</loc>
     <lastmod>2026-11-03</lastmod>
   </url>
   <url>
-    <loc>https://[DOMAIN]/guides/renters-insurance-basics.html</loc>
+    <loc>https://unpackinsurance.com/guides/renters-insurance-basics.html</loc>
     <lastmod>2026-11-03</lastmod>
   </url>
   <url>
-    <loc>https://[DOMAIN]/guides/home-insurance-deductibles-explained.html</loc>
+    <loc>https://unpackinsurance.com/guides/home-insurance-deductibles-explained.html</loc>
     <lastmod>2026-11-03</lastmod>
   </url>
   <url>
-    <loc>https://[DOMAIN]/guides/how-to-compare-car-insurance-quotes.html</loc>
+    <loc>https://unpackinsurance.com/guides/how-to-compare-car-insurance-quotes.html</loc>
     <lastmod>2026-11-03</lastmod>
   </url>
   <url>
-    <loc>https://[DOMAIN]/guides/replacement-cost-vs-actual-cash-value.html</loc>
+    <loc>https://unpackinsurance.com/guides/replacement-cost-vs-actual-cash-value.html</loc>
     <lastmod>2026-11-03</lastmod>
   </url>
   <url>
-    <loc>https://[DOMAIN]/guides/what-is-full-coverage-car-insurance.html</loc>
+    <loc>https://unpackinsurance.com/guides/what-is-full-coverage-car-insurance.html</loc>
     <lastmod>2026-11-03</lastmod>
   </url>
   <url>
-    <loc>https://[DOMAIN]/guides/how-to-file-a-car-insurance-claim.html</loc>
+    <loc>https://unpackinsurance.com/guides/how-to-file-a-car-insurance-claim.html</loc>
     <lastmod>2026-11-03</lastmod>
   </url>
   <url>
-    <loc>https://[DOMAIN]/guides/why-did-my-car-insurance-go-up.html</loc>
+    <loc>https://unpackinsurance.com/guides/why-did-my-car-insurance-go-up.html</loc>
     <lastmod>2026-11-03</lastmod>
   </url>
   <url>
-    <loc>https://[DOMAIN]/guides/what-does-homeowners-insurance-cover.html</loc>
+    <loc>https://unpackinsurance.com/guides/what-does-homeowners-insurance-cover.html</loc>
     <lastmod>2026-11-03</lastmod>
   </url>
   <url>
-    <loc>https://[DOMAIN]/guides/do-you-need-flood-insurance.html</loc>
+    <loc>https://unpackinsurance.com/guides/do-you-need-flood-insurance.html</loc>
     <lastmod>2026-11-03</lastmod>
   </url>
   <url>
-    <loc>https://[DOMAIN]/guides/</loc>
+    <loc>https://unpackinsurance.com/guides/</loc>
     <lastmod>2026-11-03</lastmod>
   </url>
   <url>
-    <loc>https://[DOMAIN]/home-insurance.html</loc>
+    <loc>https://unpackinsurance.com/home-insurance.html</loc>
     <lastmod>2026-11-03</lastmod>
   </url>
   <url>
-    <loc>https://[DOMAIN]/</loc>
+    <loc>https://unpackinsurance.com/</loc>
     <lastmod>2026-11-03</lastmod>
   </url>
   <url>
-    <loc>https://[DOMAIN]/legal-notice.html</loc>
+    <loc>https://unpackinsurance.com/legal-notice.html</loc>
     <lastmod>2026-11-03</lastmod>
   </url>
   <url>
-    <loc>https://[DOMAIN]/privacy-policy.html</loc>
+    <loc>https://unpackinsurance.com/privacy-policy.html</loc>
     <lastmod>2026-11-03</lastmod>
   </url>
   <url>
-    <loc>https://[DOMAIN]/terms.html</loc>
+    <loc>https://unpackinsurance.com/terms.html</loc>
     <lastmod>2026-11-03</lastmod>
   </url>
 </urlset>
