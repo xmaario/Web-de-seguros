@@ -13,6 +13,7 @@ OUT = args[0] if args else os.path.dirname(HERE)
 CLEAN = "--html-links" not in sys.argv
 SITE = "https://unpackinsurance.com"
 BRAND = "UnpackInsurance"
+AUTHOR = "Mario González Ordóñez"
 ADSENSE = "ca-pub-XXXXXXXXXXXXXXXX"
 OG_IMAGE = SITE + "/images/og-image.png"
 
@@ -175,8 +176,7 @@ def jsonld(meta):
             "image": [OG_IMAGE],
             "datePublished": meta["date"],
             "dateModified": meta.get("updated", meta["date"]),
-            "author": {"@type": "Organization", "name": BRAND,
-                       "url": SITE + "/about.html"},
+            "author": {"@type": "Person", "name": AUTHOR, "url": canonical("author.html"), "jobTitle": "Founder and editor", "worksFor": {"@id": SITE + "/#organization"}},
             "publisher": org,
             "mainEntityOfPage": canonical(meta["path"]),
             "articleSection": meta["category"],
@@ -214,7 +214,7 @@ def article_body(meta, body, prefix):
     bc.append(f'        <li aria-current="page">{crumbs[-1][0]}</li>')
     bc.append("      </ol></nav>")
     body = body.replace("      <h1>", "\n".join(bc) + "\n      <h1>", 1)
-    byline = (f'\n      <p class="byline">By {BRAND} <span aria-hidden="true">·</span> '
+    byline = (f'\n      <p class="byline">Published by <a href="{rel(prefix, "author.html")}">{AUTHOR}</a> <span aria-hidden="true">·</span> '
               f'Updated <time datetime="{meta.get("updated", meta["date"])}">'
               f'{nice_date(meta.get("updated", meta["date"]))}</time> '
               f'<span aria-hidden="true">·</span> {read_time(meta)} min read</p>')
@@ -259,6 +259,7 @@ def footer(prefix):
                       ("guides/index.html", "All guides"),
                       ("glossary.html", "Glossary")]),
         col("Company", [("about.html", "About us"),
+                        ("author.html", "Our editor"),
                         ("contact.html", "Contact"),
                         ("sitemap.xml", "Sitemap")]),
     ])
