@@ -1,0 +1,6 @@
+# Files in the repo that must not be published on the website
+.git
+.assetsignore
+wrangler.jsonc
+LAUNCH-CHECKLIST.md
+node_modules
