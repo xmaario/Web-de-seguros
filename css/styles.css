@@ -769,7 +769,8 @@ main:focus {
   margin: 2rem 0;
 }
 
-.toc-title {
+.toc-title,
+.prose .toc-title {
   font-size: 1.0625rem;
   margin: 0 0 0.5rem;
 }
