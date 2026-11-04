@@ -84,6 +84,21 @@ def canonical(path):
     return SITE + "/" + path
 
 
+def version_assets(html_text):
+    """Append ?v=<content hash> to illustration, CSS and JS URLs so browsers fetch new versions after changes."""
+    import hashlib
+
+    def fix(m):
+        attr, url = m.group(1), m.group(2)
+        local = os.path.normpath(os.path.join(OUT, url.lstrip("./").replace("../", "")))
+        if not os.path.isfile(local):
+            return m.group(0)
+        h = hashlib.md5(open(local, "rb").read()).hexdigest()[:8]
+        return f'{attr}="{url}?v={h}"'
+
+    return re.sub(r'(src|href)="((?:\.\./|/)*(?:images/illustration-[a-z-]+\.svg|css/styles\.css|js/[a-z]+\.js))"', fix, html_text)
+
+
 def clean_links(html_text):
     """Rewrite internal .html links to clean URLs (about.html -> about, guides/index.html -> guides/)."""
     if not CLEAN:
@@ -419,7 +434,7 @@ for meta in pages:
     dest = os.path.join(OUT, meta["path"])
     os.makedirs(os.path.dirname(dest) or ".", exist_ok=True)
     with open(dest, "w", encoding="utf-8") as fh:
-        fh.write(clean_links(render(meta)))
+        fh.write(version_assets(clean_links(render(meta))))
     print("wrote", meta["path"], meta["words"], "words")
 
 # sitemap.xml

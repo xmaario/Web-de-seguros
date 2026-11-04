@@ -25,7 +25,7 @@ for f in pages:
             json.loads(block.replace("<\\/", "</"))
         except Exception as e:
             errors.append(f"{f}: invalid JSON-LD ({e})")
-    for href in re.findall(r'href="([^"#]+)', t):
+    for href in re.findall(r'(?:href|src)="([^"#?]+)', t):
         if href.startswith(("http", "mailto")):
             continue
         p = href.lstrip("/") if href.startswith("/") else os.path.normpath(os.path.join(os.path.dirname(f), href))
