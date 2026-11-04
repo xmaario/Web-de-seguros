@@ -20,7 +20,7 @@ This folder is excluded from the live site by `.assetsignore`.
 4. Run `python3 tools/build.py` then `python3 tools/check.py`.
 
 ## Content rules
-- US English, original text, 800 to 1,000 words per guide.
+- US English, original text, 800 to 1,000 words per guide. Title at most about 60 characters, description at most 160.
 - No real insurance company names, logos or implied partnerships.
 - No invented reviews, testimonials, ratings, statistics or savings claims. No promised prices.
 - Use "may", "often", "varies by state and provider". General information, not advice.

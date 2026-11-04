@@ -321,8 +321,8 @@ def render(meta):
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>{title}</title>
-  <meta name="description" content="{desc}">
+  <title>{html.escape(title, quote=False)}</title>
+  <meta name="description" content="{html.escape(desc)}">
   <meta name="robots" content="{robots}">
 {canonical_tag}  <meta name="theme-color" content="#f5f5f7" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
@@ -330,8 +330,8 @@ def render(meta):
   <meta name="google-adsense-account" content="{ADSENSE}">
   <meta property="og:site_name" content="{BRAND}">
   <meta property="og:type" content="{og_type}">
-  <meta property="og:title" content="{title}">
-  <meta property="og:description" content="{desc}">
+  <meta property="og:title" content="{html.escape(title)}">
+  <meta property="og:description" content="{html.escape(desc)}">
   <meta property="og:url" content="{url}">
   <meta property="og:image" content="{OG_IMAGE}">
   <meta property="og:image:width" content="1200">
@@ -339,8 +339,8 @@ def render(meta):
   <meta property="og:image:alt" content="Car and home insurance, explained simply">
   <meta property="og:locale" content="en_US">
 {article_meta}  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="{title}">
-  <meta name="twitter:description" content="{desc}">
+  <meta name="twitter:title" content="{html.escape(title)}">
+  <meta name="twitter:description" content="{html.escape(desc)}">
   <meta name="twitter:image" content="{OG_IMAGE}">
   <link rel="icon" href="{prefix}favicon.ico" sizes="32x32">
   <link rel="icon" href="{prefix}images/favicon.svg" type="image/svg+xml">

@@ -11,8 +11,15 @@ for f in pages:
         errors.append(f"{f}: must have exactly one <h1>")
     m = re.search(r"<title>(.*?)</title>", t)
     titles.setdefault(m.group(1) if m else "", []).append(f)
-    if 'name="description"' not in t:
+    d = re.search(r'name="description" content="([^"]*)"', t)
+    if not d or not d.group(1).strip():
         errors.append(f"{f}: missing meta description")
+    elif f != "404.html":
+        import html as _h
+        if len(_h.unescape(d.group(1))) > 160:
+            errors.append(f"{f}: meta description longer than 160 characters")
+        if m and len(_h.unescape(m.group(1))) > 65:
+            errors.append(f"{f}: <title> longer than 65 characters")
     for block in re.findall(r'<script type="application/ld\+json">(.*?)</script>', t, re.S):
         try:
             json.loads(block.replace("<\\/", "</"))
