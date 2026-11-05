@@ -4,7 +4,7 @@ The scheduled writer takes the first unchecked topic, writes the guide, and chec
 Format: `- [ ] Title | slug | category`. Category must be `Car insurance` or `Home insurance`.
 Add new ideas at the end. Never reuse a slug that already exists in `tools/content/`.
 
-- [ ] Comprehensive vs. Collision Coverage: What's the Difference? | comprehensive-vs-collision-coverage | Car insurance
+- [x] Comprehensive vs. Collision Coverage: What's the Difference? | comprehensive-vs-collision-coverage | Car insurance
 - [ ] How Much Homeowners Insurance Do You Need? | how-much-homeowners-insurance-do-you-need | Home insurance
 - [ ] Uninsured Motorist Coverage Explained | uninsured-motorist-coverage-explained | Car insurance
 - [ ] How to File a Home Insurance Claim, Step by Step | how-to-file-a-home-insurance-claim | Home insurance
