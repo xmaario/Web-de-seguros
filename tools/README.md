@@ -28,3 +28,5 @@ This folder is excluded from the live site by `.assetsignore`.
 - No invented reviews, testimonials, ratings, statistics or savings claims. No promised prices.
 - Use "may", "often", "varies by state and provider". General information, not advice.
 - Only state facts you are confident are accurate and current; otherwise keep the wording general.
+- `indexnow.py` — after a change is live, run `python3 tools/indexnow.py <url>` (or no arguments for the
+  whole sitemap) to notify Bing and other IndexNow search engines. The public key file is `<key>.txt` at the root.
