@@ -138,7 +138,7 @@ def guide_cards(prefix, items, heading_level=3):
             <p class="card-eyebrow">{a["category"]}</p>
             <h{heading_level}><a href="{rel(prefix, a["path"])}">{a["h1"]}</a></h{heading_level}>
             <p>{html.escape(a["description"], quote=False)}</p>
-            <p class="card-meta">{read_time(a)} min read</p>
+            <p class="card-meta"><time datetime="{a["date"]}">{nice_date(a["date"])}</time> · {read_time(a)} min read</p>
           </article>''')
     out.append("        </div>")
     return "\n".join(out)
@@ -249,9 +249,14 @@ def article_body(meta, body, prefix):
     bc.append(f'        <li aria-current="page">{crumbs[-1][0]}</li>')
     bc.append("      </ol></nav>")
     body = body.replace("      <h1>", "\n".join(bc) + "\n      <h1>", 1)
-    byline = (f'\n      <p class="byline">Published by <a href="{rel(prefix, "author.html")}">{AUTHOR}</a> <span aria-hidden="true">·</span> '
-              f'Updated <time datetime="{meta.get("updated", meta["date"])}">'
-              f'{nice_date(meta.get("updated", meta["date"]))}</time> '
+    published = meta["date"]
+    updated = meta.get("updated")
+    dates = (f'Published <time datetime="{published}">{nice_date(published)}</time>')
+    if updated and updated != published:
+        dates += (f' <span aria-hidden="true">·</span> '
+                  f'Updated <time datetime="{updated}">{nice_date(updated)}</time>')
+    byline = (f'\n      <p class="byline">By <a href="{rel(prefix, "author.html")}">{AUTHOR}</a> '
+              f'<span aria-hidden="true">·</span> {dates} '
               f'<span aria-hidden="true">·</span> {read_time(meta)} min read</p>')
     body = body.replace("</h1>", "</h1>" + byline, 1)
 

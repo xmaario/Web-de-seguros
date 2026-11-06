@@ -16,6 +16,7 @@ This folder is excluded from the live site by `.assetsignore`.
    (under 160 characters), `path: guides/<slug>.html`, `section: guides/index.html`, `type: article`,
    `category: Car insurance` or `Home insurance`, `date: YYYY-MM-DD`, and `related:` with three existing guide paths.
    Also `takeaways:` with 3 or 4 short key points separated by ` | ` (shown in a "Key takeaways" box).
+   Optional `updated: YYYY-MM-DD` when an existing guide is revised (shown as "Updated" next to the publication date).
    The build adds the category illustration, the "On this page" table of contents and section ids automatically.
 3. Write the body inside `<article class="container prose">`: one `<h1>`, a `lead` paragraph, `<h2>` sections,
    a "The bottom line" section, and a closing `<p class="note">` disclaimer.
