@@ -255,8 +255,7 @@ def article_body(meta, body, prefix):
     if updated and updated != published:
         dates += (f' <span aria-hidden="true">·</span> '
                   f'Updated <time datetime="{updated}">{nice_date(updated)}</time>')
-    byline = (f'\n      <p class="byline">By <a href="{rel(prefix, "author.html")}">{AUTHOR}</a> '
-              f'<span aria-hidden="true">·</span> {dates} '
+    byline = (f'\n      <p class="byline">{dates} '
               f'<span aria-hidden="true">·</span> {read_time(meta)} min read</p>')
     body = body.replace("</h1>", "</h1>" + byline, 1)
 
