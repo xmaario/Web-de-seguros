@@ -5,6 +5,9 @@ Format: `- [ ] Title | slug | category`. Category must be `Car insurance` or `Ho
 Add new ideas at the end. Never reuse a slug that already exists in `tools/content/`.
 
 - [x] Comprehensive vs. Collision Coverage: What's the Difference? | comprehensive-vs-collision-coverage | Car insurance
+- [ ] Liability Limits Explained: What 100/300/100 Means | liability-limits-explained | Car insurance
+- [ ] Is Gap Insurance Required? Lender and Lease Rules | is-gap-insurance-required | Car insurance
+- [ ] State Minimum Car Insurance: Why It May Not Be Enough | state-minimum-car-insurance | Car insurance
 - [ ] How Much Homeowners Insurance Do You Need? | how-much-homeowners-insurance-do-you-need | Home insurance
 - [ ] Uninsured Motorist Coverage Explained | uninsured-motorist-coverage-explained | Car insurance
 - [ ] How to File a Home Insurance Claim, Step by Step | how-to-file-a-home-insurance-claim | Home insurance
