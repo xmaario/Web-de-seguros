@@ -6,6 +6,8 @@ Add new ideas at the end. Never reuse a slug that already exists in `tools/conte
 
 - [x] Comprehensive vs. Collision Coverage: What's the Difference? | comprehensive-vs-collision-coverage | Car insurance
 - [ ] Upside Down on Your Car Loan? Your Options Explained | upside-down-car-loan | Car insurance
+- [ ] Does Car Insurance Cover Uber and Lyft Driving? Rideshare Insurance Explained | rideshare-insurance-explained | Car insurance
+- [ ] How to Insure a Car You Just Bought: Title, Timing and Permit Drivers | how-to-insure-a-car-you-just-bought | Car insurance
 - [ ] Liability Limits Explained: What 100/300/100 Means | liability-limits-explained | Car insurance
 - [ ] Is Gap Insurance Required? Lender and Lease Rules | is-gap-insurance-required | Car insurance
 - [ ] State Minimum Car Insurance: Why It May Not Be Enough | state-minimum-car-insurance | Car insurance
