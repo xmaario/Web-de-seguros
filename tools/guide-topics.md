@@ -5,6 +5,7 @@ Format: `- [ ] Title | slug | category`. Category must be `Car insurance` or `Ho
 Add new ideas at the end. Never reuse a slug that already exists in `tools/content/`.
 
 - [x] Comprehensive vs. Collision Coverage: What's the Difference? | comprehensive-vs-collision-coverage | Car insurance
+- [ ] Upside Down on Your Car Loan? Your Options Explained | upside-down-car-loan | Car insurance
 - [ ] Liability Limits Explained: What 100/300/100 Means | liability-limits-explained | Car insurance
 - [ ] Is Gap Insurance Required? Lender and Lease Rules | is-gap-insurance-required | Car insurance
 - [ ] State Minimum Car Insurance: Why It May Not Be Enough | state-minimum-car-insurance | Car insurance
