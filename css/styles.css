@@ -1387,6 +1387,55 @@ legend {
   }
 }
 
+
+/* ---------- Cookie consent banner ---------- */
+.consent-banner {
+  position: fixed;
+  left: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 200;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 1rem 1.25rem;
+  background: var(--bg-elevated);
+  color: var(--text);
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.18);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1rem;
+}
+
+.consent-banner p {
+  flex: 1 1 260px;
+  margin: 0;
+  font-size: 1rem;
+}
+
+.consent-banner a {
+  text-decoration: underline;
+}
+
+.consent-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.button-light {
+  color: var(--text);
+  background: var(--bg-alt);
+  box-shadow: none;
+}
+
+.button-light:hover {
+  color: var(--text);
+  background: var(--border);
+  box-shadow: none;
+}
+
 /* ---------- Tablet ---------- */
 @media (min-width: 48em) {
   .hero {

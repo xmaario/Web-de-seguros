@@ -21,7 +21,7 @@ const AD_SLOTS = {
   inContent: ""    // position on car, home and calculator pages
 };
 
-const GA_MEASUREMENT_ID = "";
+const GA_MEASUREMENT_ID = "G-VHL5WR2798";
 
 (function () {
   "use strict";
@@ -79,6 +79,68 @@ const GA_MEASUREMENT_ID = "";
     window.googlefc = window.googlefc || {};
     window.googlefc.callbackQueue = window.googlefc.callbackQueue || [];
   }
+  /* ---------- Consent for analytics cookies ----------
+   * Google Consent Mode v2: everything is denied by default. Analytics cookies are only set
+   * after the visitor accepts in the banner below. Once AdSense is active, Google's own
+   * consent message (Privacy & messaging) handles consent instead of this banner. */
+  var CONSENT_KEY = "ui_consent";
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = window.gtag || function () {
+    window.dataLayer.push(arguments);
+  };
+  window.gtag("consent", "default", {
+    ad_storage: "denied",
+    ad_user_data: "denied",
+    ad_personalization: "denied",
+    analytics_storage: "denied",
+    wait_for_update: 500
+  });
+
+  function readChoice() {
+    try { return window.localStorage.getItem(CONSENT_KEY); } catch (e) { return null; }
+  }
+  function saveChoice(value) {
+    try { window.localStorage.setItem(CONSENT_KEY, value); } catch (e) {}
+  }
+  function applyChoice(value) {
+    window.gtag("consent", "update", { analytics_storage: value === "granted" ? "granted" : "denied" });
+  }
+
+  var banner = null;
+  function showBanner() {
+    if (banner) { banner.hidden = false; banner.querySelector("button").focus(); return; }
+    var base = (document.querySelector('link[rel="stylesheet"]').getAttribute("href") || "").split("?")[0].replace("css/styles.css", "");
+    banner = document.createElement("section");
+    banner.className = "consent-banner";
+    banner.setAttribute("role", "region");
+    banner.setAttribute("aria-label", "Cookie consent");
+    banner.innerHTML =
+      '<p>We use analytics cookies to understand how our guides are used. They are only set if you accept. ' +
+      '<a href="' + base + 'cookie-policy.html">Cookie Policy</a></p>' +
+      '<div class="consent-actions">' +
+      '<button type="button" class="button button-light" data-consent="denied">Reject</button>' +
+      '<button type="button" class="button button-light" data-consent="granted">Accept</button>' +
+      '</div>';
+    banner.addEventListener("click", function (event) {
+      var btn = event.target.closest && event.target.closest("[data-consent]");
+      if (!btn) return;
+      var value = btn.getAttribute("data-consent");
+      saveChoice(value);
+      applyChoice(value);
+      banner.hidden = true;
+    });
+    document.body.appendChild(banner);
+  }
+
+  if (!adsActive) {
+    var stored = readChoice();
+    if (stored) {
+      applyChoice(stored);
+    } else if (/^G-[A-Z0-9]+$/.test(GA_MEASUREMENT_ID)) {
+      showBanner();
+    }
+  }
+
   document.addEventListener("click", function (event) {
     var trigger = event.target.closest && event.target.closest("[data-privacy-settings]");
     if (!trigger) return;
@@ -88,18 +150,13 @@ const GA_MEASUREMENT_ID = "";
         window.googlefc.showRevocationMessage();
       });
     } else {
-      var base = document.querySelector('link[rel="stylesheet"]').getAttribute("href").replace("css/styles.css", "");
-      window.location.href = base + "cookie-policy.html#manage";
+      showBanner();
     }
   });
 
-  /* ---------- Google Analytics 4 (optional) ---------- */
+  /* ---------- Google Analytics 4 ---------- */
   if (/^G-[A-Z0-9]+$/.test(GA_MEASUREMENT_ID)) {
     loadScript("https://www.googletagmanager.com/gtag/js?id=" + GA_MEASUREMENT_ID);
-    window.dataLayer = window.dataLayer || [];
-    window.gtag = function () {
-      window.dataLayer.push(arguments);
-    };
     window.gtag("js", new Date());
     window.gtag("config", GA_MEASUREMENT_ID);
   }
