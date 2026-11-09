@@ -58,6 +58,95 @@
 
 
 
+
+  document.documentElement.classList.add("js-ready");
+
+  /* Interactive coverage explainer on the home page */
+  var scene = document.querySelector(".scene");
+  if (scene) {
+    var chips = document.querySelectorAll(".explainer-chips .chip");
+    var captions = document.querySelectorAll(".explainer-captions li");
+    var setCoverage = function (cov) {
+      scene.setAttribute("data-active", cov);
+      Array.prototype.forEach.call(chips, function (c) {
+        c.setAttribute("aria-pressed", String(c.getAttribute("data-cov") === cov));
+      });
+      Array.prototype.forEach.call(captions, function (li) {
+        li.classList.toggle("is-active", li.getAttribute("data-for") === cov);
+      });
+    };
+    Array.prototype.forEach.call(chips, function (c) {
+      c.addEventListener("click", function () { setCoverage(c.getAttribute("data-cov")); });
+    });
+    setCoverage("liability");
+  }
+
+  /* Deductible slider (illustrative) */
+  var range = document.getElementById("ded-range");
+  if (range) {
+    var REPAIR = 4000;
+    var money = function (n) { return "$" + n.toLocaleString("en-US"); };
+    var updateDeductible = function () {
+      var d = parseInt(range.value, 10);
+      var you = Math.min(d, REPAIR);
+      var pctYou = (you / REPAIR) * 100;
+      document.getElementById("ded-out").textContent = money(d);
+      document.getElementById("ded-you").textContent = money(you);
+      document.getElementById("ded-ins").textContent = money(REPAIR - you);
+      document.querySelector(".ded-you").style.width = pctYou + "%";
+      document.querySelector(".ded-ins").style.width = (100 - pctYou) + "%";
+      var min = parseInt(range.min, 10), max = parseInt(range.max, 10);
+      document.querySelector(".ded-dot").style.left = (8 + ((d - min) / (max - min)) * 84) + "%";
+    };
+    range.addEventListener("input", updateDeductible);
+    updateDeductible();
+  }
+
+  /* Reading progress bar and table of contents rail on guides */
+  var article = document.querySelector("article.prose");
+  if (article && document.querySelector(".byline")) {
+    var bar = document.createElement("div");
+    bar.className = "read-progress";
+    bar.setAttribute("aria-hidden", "true");
+    bar.innerHTML = "<span></span>";
+    document.body.appendChild(bar);
+    var fill = bar.firstChild;
+    var onRead = function () {
+      var rect = article.getBoundingClientRect();
+      var total = rect.height - window.innerHeight;
+      var done = total > 0 ? Math.min(Math.max(-rect.top / total, 0), 1) : 1;
+      fill.style.transform = "scaleX(" + done + ")";
+    };
+    window.addEventListener("scroll", onRead, { passive: true });
+    window.addEventListener("resize", onRead);
+    onRead();
+
+    var toc = article.querySelector(".toc ol");
+    if (toc) {
+      var rail = document.createElement("nav");
+      rail.className = "toc-rail";
+      rail.setAttribute("aria-label", "On this page (sidebar)");
+      rail.innerHTML = "<p>On this page</p>" + toc.outerHTML;
+      document.body.appendChild(rail);
+      var links = rail.querySelectorAll("a");
+      var sections = Array.prototype.map.call(links, function (a) {
+        return document.getElementById(a.getAttribute("href").slice(1));
+      });
+      if ("IntersectionObserver" in window) {
+        var spy = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (!entry.isIntersecting) return;
+            var id = entry.target.id;
+            Array.prototype.forEach.call(links, function (a) {
+              a.classList.toggle("is-current", a.getAttribute("href") === "#" + id);
+            });
+          });
+        }, { rootMargin: "0px 0px -70% 0px" });
+        sections.forEach(function (s) { if (s) spy.observe(s); });
+      }
+    }
+  }
+
   /* Header shadow once the page is scrolled */
   var header = document.querySelector(".site-header");
   if (header) {

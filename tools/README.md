@@ -30,3 +30,6 @@ This folder is excluded from the live site by `.assetsignore`.
 - Only state facts you are confident are accurate and current; otherwise keep the wording general.
 - `indexnow.py` — after a change is live, run `python3 tools/indexnow.py <url>` (or no arguments for the
   whole sitemap) to notify Bing and other IndexNow search engines. The public key file is `<key>.txt` at the root.
+- Callout boxes: guides may include 1-2 callouts where they genuinely help, e.g.
+  `<aside class="callout tip"><span class="callout-title">Tip</span><p>…</p></aside>`
+  (classes: `tip`, `warn` with title "Watch out", `example` with title "Example"). Examples must be clearly illustrative.

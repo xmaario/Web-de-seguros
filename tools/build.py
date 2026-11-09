@@ -38,6 +38,8 @@ LOGO_SVG = ('<svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true" focu
 
 ART = {"Car insurance": "images/illustration-car.svg", "Home insurance": "images/illustration-home.svg"}
 
+CAT_CLASS = {"Car insurance": "cat-car", "Home insurance": "cat-home"}
+
 CUR = ' aria-current="page"'
 
 AD_SLOT = ('<aside class="ad-slot" data-ad-key="{key}" aria-label="Advertisement" hidden>'
@@ -135,7 +137,7 @@ def guide_cards(prefix, items, heading_level=3):
     out = ['        <div class="card-grid">']
     for a in items:
         out.append(f'''          <article class="card card-link">
-            <p class="card-eyebrow">{a["category"]}</p>
+            <p class="card-eyebrow {CAT_CLASS.get(a["category"], "")}">{a["category"]}</p>
             <h{heading_level}><a href="{rel(prefix, a["path"])}">{a["h1"]}</a></h{heading_level}>
             <p>{html.escape(a["description"], quote=False)}</p>
             <p class="card-meta"><time datetime="{a["date"]}">{nice_date(a["date"])}</time> · {read_time(a)} min read</p>
@@ -248,7 +250,8 @@ def article_body(meta, body, prefix):
         bc.append(f'        <li><a href="{rel(prefix, href)}">{name}</a></li>')
     bc.append(f'        <li aria-current="page">{crumbs[-1][0]}</li>')
     bc.append("      </ol></nav>")
-    body = body.replace("      <h1>", "\n".join(bc) + "\n      <h1>", 1)
+    chip = f'      <p class="category-chip {CAT_CLASS.get(meta.get("category"), "")}">{meta.get("category", "")}</p>\n'
+    body = body.replace("      <h1>", "\n".join(bc) + "\n" + chip + "      <h1>", 1)
     published = meta["date"]
     updated = meta.get("updated")
     dates = (f'Published <time datetime="{published}">{nice_date(published)}</time>')
@@ -370,6 +373,10 @@ def render(meta):
     if t == "article":
         body = article_body(meta, body, prefix)
     body = expand_guides(body, prefix, current=path)
+    body = body.replace("<!--COUNT:guides-->", str(len(articles)))
+    if "<!--COUNT:terms-->" in body:
+        gl = by_path.get("glossary.html")
+        body = body.replace("<!--COUNT:terms-->", str(len(re.findall(r"<dt id=", gl["body"])) if gl else 0))
     body = body.replace("<!--AD-->", "      " + AD_SLOT.format(key="inContent"))
 
     nav_html = "\n".join(
