@@ -101,12 +101,12 @@
   <main id="main">
     <div class="container prose">
       <h1>Contact us</h1>
-      <p class="lead">Have a question, correction, or feedback about our content? Send us a message or email <a href="mailto:unpackinsurance@gmail.com">unpackinsurance@gmail.com</a>.</p>
+      <p class="lead">Have a question, correction, or feedback about our content? Send us a message or email <a href="mailto:contact@unpackinsurance.com">contact@unpackinsurance.com</a>.</p>
       <p>Please note: we are not an insurance company or agency. We cannot provide quotes, make changes to a policy, or handle claims. For those requests, contact your insurer or agent directly. Do not include sensitive information such as Social Security numbers, policy numbers, or medical details in your message.</p>
 
       <!-- The form posts to /api/contact (src/worker.js), which emails the message to the site owner.
            If data-endpoint is empty, the form stays hidden and visitors see the email option only. -->
-      <form id="contact-form" class="form" action="" method="post" data-endpoint="" novalidate hidden>
+      <form id="contact-form" class="form" action="" method="post" data-endpoint="/api/contact" novalidate hidden>
         <div class="hp-field" aria-hidden="true">
           <label for="website">Leave this field empty</label>
           <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
@@ -160,13 +160,13 @@
           </dl>
         </div>
 
-        <p class="field-error" id="form-error" role="alert" hidden>Sorry, your message could not be sent. Please try again or email <a href="mailto:unpackinsurance@gmail.com">unpackinsurance@gmail.com</a>.</p>
+        <p class="field-error" id="form-error" role="alert" hidden>Sorry, your message could not be sent. Please try again or email <a href="mailto:contact@unpackinsurance.com">contact@unpackinsurance.com</a>.</p>
         <button class="button" type="submit">Send message</button>
       </form>
 
       <div id="contact-fallback" class="confirmation">
         <h2>Email us</h2>
-        <p>Write to <a href="mailto:unpackinsurance@gmail.com">unpackinsurance@gmail.com</a>. We usually reply within a few business days.</p>
+        <p>Write to <a href="mailto:contact@unpackinsurance.com">contact@unpackinsurance.com</a>. We usually reply within a few business days.</p>
         <p>We use your email only to reply to you. See our <a href="privacy-policy">Privacy Policy</a>.</p>
       </div>
 
