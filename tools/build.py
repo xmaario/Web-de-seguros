@@ -468,7 +468,7 @@ def footer(prefix):
                                ("guides/what-does-homeowners-insurance-cover.html", "What it covers"),
                                ("guides/do-you-need-flood-insurance.html", "Flood insurance"),
                                ("guides/renters-insurance-basics.html", "Renters insurance")]),
-        col("Tools", [("calculator.html", "Estimate calculator"),
+        col("Tools", [("calculator.html", "Car insurance calculator"),
                       ("gap-insurance-quiz.html", "Gap insurance quiz"),
                       ("liability-coverage-calculator.html", "Liability limits calculator"),
                       ("guides/index.html", "All guides"),
