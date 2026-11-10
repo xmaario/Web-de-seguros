@@ -2317,3 +2317,20 @@ input[type="text"][inputmode="numeric"] {
   height: 1px;
   overflow: hidden;
 }
+
+/* Compact first-layer data protection notice under the contact form */
+.data-notice-compact {
+  margin: 1.25rem 0 0;
+  padding-top: 1rem;
+  border-top: 1px solid var(--hairline);
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+.data-notice-compact p {
+  margin: 0 0 0.25rem;
+}
+.data-notice-compact .data-notice-title {
+  font-weight: 600;
+  color: var(--text);
+}
