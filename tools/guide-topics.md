@@ -6,7 +6,7 @@ Add new ideas at the end. Never reuse a slug that already exists in `tools/conte
 
 - [x] Comprehensive vs. Collision Coverage: What's the Difference? | comprehensive-vs-collision-coverage | Car insurance
 - [x] Upside Down on Your Car Loan? Your Options Explained | upside-down-car-loan | Car insurance
-- [ ] Does Car Insurance Cover Uber and Lyft Driving? Rideshare Insurance Explained | rideshare-insurance-explained | Car insurance
+- [x] Does Car Insurance Cover Uber and Lyft Driving? Rideshare Insurance Explained | rideshare-insurance-explained | Car insurance
 - [ ] How to Insure a Car You Just Bought: Title, Timing and Permit Drivers | how-to-insure-a-car-you-just-bought | Car insurance
 - [ ] How Long Does a Car Insurance Claim Take? | how-long-does-a-car-insurance-claim-take | Car insurance
 - [ ] What to Say (and Not Say) to an Insurance Adjuster | what-to-say-to-an-insurance-adjuster | Car insurance
