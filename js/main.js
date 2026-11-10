@@ -206,11 +206,20 @@
         card.hidden = !match;
         if (match) shown++;
       });
-      headings.forEach(function (h) {
+      /* Topic headings: hide with their card grid when nothing in it matches */
+      Array.prototype.forEach.call(document.querySelectorAll(".page-collection .topic-title"), function (h) {
         var grid = h.nextElementSibling;
         var any = grid && grid.querySelector(".card:not([hidden])");
         h.hidden = !any;
         if (grid) grid.hidden = !any;
+      });
+      /* Category headings: hide when no card matches before the next category */
+      headings.forEach(function (h) {
+        var any = false;
+        for (var el = h.nextElementSibling; el && !el.matches("h2.section-title"); el = el.nextElementSibling) {
+          if (el.querySelector && el.querySelector(".card:not([hidden])")) { any = true; break; }
+        }
+        h.hidden = !any;
       });
       status.textContent = q ? (shown ? shown + (shown === 1 ? " guide found" : " guides found") : "No guides match. Try another word.") : "";
     });

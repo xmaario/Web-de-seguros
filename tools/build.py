@@ -70,6 +70,57 @@ SOURCES = {
                  "Federal Emergency Management Agency (FEMA)",
                  "https://msc.fema.gov/portal/home"),
 }
+# Topic clusters inside each category ("topic:" header in every guide).
+TOPICS = {
+    "Car insurance": ["Coverage basics", "Costs and savings", "Claims and accidents",
+                      "Car loans and leases", "Drivers and special situations"],
+    "Home insurance": ["What homeowners insurance covers", "Costs and deductibles",
+                       "Renters and condo owners", "Extra protection"],
+}
+
+# Glossary terms linked to the guide that explains them (only where the definition has no link yet).
+GLOSSARY_LINKS = {
+    "accident-forgiveness": "guides/how-long-does-an-accident-stay-on-your-insurance.html",
+    "actual-cash-value": "guides/replacement-cost-vs-actual-cash-value.html",
+    "adjuster": "guides/how-to-file-a-car-insurance-claim.html",
+    "claim": "guides/how-to-file-a-car-insurance-claim.html",
+    "clue-report": "guides/how-long-does-an-accident-stay-on-your-insurance.html",
+    "collision": "guides/comprehensive-vs-collision-coverage.html",
+    "comprehensive": "guides/comprehensive-vs-collision-coverage.html",
+    "condo-insurance": "guides/condo-insurance-ho6-explained.html",
+    "deductible": "guides/car-insurance-deductibles-explained.html",
+    "depreciation": "guides/upside-down-car-loan.html",
+    "dwelling-coverage": "guides/what-does-homeowners-insurance-cover.html",
+    "fr-44": "guides/what-is-an-sr-22.html",
+    "gap-coverage": "guides/what-is-gap-insurance.html",
+    "ho-3": "guides/what-does-homeowners-insurance-cover.html",
+    "ho-4": "guides/renters-insurance-basics.html",
+    "liability-coverage": "guides/how-much-car-insurance-do-you-need.html",
+    "limit": "liability-coverage-calculator.html",
+    "loss-assessment": "guides/condo-insurance-ho6-explained.html",
+    "master-policy": "guides/condo-insurance-ho6-explained.html",
+    "nfip": "guides/do-you-need-flood-insurance.html",
+    "premium": "guides/why-did-my-car-insurance-go-up.html",
+    "replacement-cost": "guides/replacement-cost-vs-actual-cash-value.html",
+    "sr-22": "guides/what-is-an-sr-22.html",
+    "total-loss": "guides/what-is-gap-insurance.html",
+    "umbrella": "guides/what-is-umbrella-insurance.html",
+    "water-backup": "guides/does-homeowners-insurance-cover-water-damage.html",
+    "wind-hail-deductible": "guides/home-insurance-deductibles-explained.html",
+}
+
+
+def link_glossary(body, prefix):
+    def fix(m):
+        tid, dt, dd = m.group(1), m.group(2), m.group(3)
+        target = GLOSSARY_LINKS.get(tid)
+        if target and "<a " not in dd:
+            name = by_path[target]["h1"] if target in by_path else "Liability limits calculator"
+            dd = dd.rstrip() + f' See <a href="{rel(prefix, target)}">{name}</a>.'
+        return f'<dt id="{tid}">{dt}</dt>\n        <dd>{dd}</dd>'
+    return re.sub(r'<dt id="([^"]+)">(.*?)</dt>\s*<dd>(.*?)</dd>', fix, body, flags=re.S)
+
+
 DEFAULT_SOURCES = {
     "Car insurance": ["naic-doi", "iii-auto"],
     "Home insurance": ["naic-doi", "naic"],
@@ -108,11 +159,11 @@ pages = [parse(f) for f in sorted(glob.glob(os.path.join(SRC, "*.html")))]
 by_path = {p["path"]: p for p in pages}
 articles = [p for p in pages if p.get("type") == "article"]
 POPULAR = [
+    "guides/what-is-gap-insurance.html",
+    "guides/how-to-file-a-car-insurance-claim.html",
     "guides/how-much-car-insurance-do-you-need.html",
     "guides/what-is-full-coverage-car-insurance.html",
     "guides/what-does-homeowners-insurance-cover.html",
-    "guides/home-insurance-deductibles-explained.html",
-    "guides/why-did-my-car-insurance-go-up.html",
     "guides/do-you-need-flood-insurance.html",
 ]
 
@@ -192,11 +243,28 @@ def expand_guides(body, prefix, current=None):
         cat, n = m.group(1), int(m.group(2))
         if cat == "all":
             items = [by_path[p] for p in POPULAR]
+        elif cat == "latest":
+            items = sorted(articles, key=lambda a: a["date"], reverse=True)
         else:
             items = [a for a in articles if a["category"] == cat]
         items = [a for a in items if a["path"] != current][:n]
         return guide_cards(prefix, items)
-    return re.sub(r"<!--GUIDES:([^:]+):(\d+)-->", repl, body)
+    body = re.sub(r"<!--GUIDES:([^:]+):(\d+)-->", repl, body)
+
+    def topics(m):
+        cat, level = m.group(1), int(m.group(2))
+        out = []
+        for topic in TOPICS[cat]:
+            items = [a for a in articles if a["category"] == cat and a.get("topic") == topic and a["path"] != current]
+            if items:
+                slug = re.sub(r"[^a-z0-9]+", "-", topic.lower()).strip("-")
+                out.append(f'        <h{level} class="topic-title" id="topic-{slug}">{topic}</h{level}>\n'
+                           + guide_cards(prefix, items, heading_level=level + 1))
+        missing = [a["path"] for a in articles if a["category"] == cat and a.get("topic") not in TOPICS[cat]]
+        if missing:
+            sys.exit(f"ERROR: missing or unknown 'topic:' in {missing}. Use one of {TOPICS[cat]}")
+        return "\n".join(out)
+    return re.sub(r"<!--TOPICS:([^:]+):(\d)-->", topics, body)
 
 
 def breadcrumbs(meta):
@@ -430,6 +498,8 @@ def render(meta):
     if t == "article":
         body = article_body(meta, body, prefix)
     body = expand_guides(body, prefix, current=path)
+    if t == "glossary":
+        body = link_glossary(body, prefix)
     body = body.replace("<!--COUNT:guides-->", str(len(articles)))
     if "<!--COUNT:terms-->" in body:
         gl = by_path.get("glossary.html")
@@ -487,6 +557,7 @@ def render(meta):
   <link rel="icon" href="{prefix}images/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="{prefix}images/apple-touch-icon.png">
   <link rel="manifest" href="{prefix}site.webmanifest">
+  <link rel="alternate" type="application/rss+xml" title="{BRAND} guides" href="{SITE}/feed.xml">
   <link rel="stylesheet" href="{prefix}css/styles.css">
 {scripts}{jsonld(meta)}</head>
 <body class="page-{t or 'page'}">
@@ -535,3 +606,34 @@ with open(os.path.join(OUT, "sitemap.xml"), "w") as fh:
                           '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
              + "\n".join(urls) + "\n</urlset>\n")
 print("wrote sitemap.xml", len(urls), "urls")
+
+# feed.xml (RSS 2.0): the 20 newest guides. Search engines and readers use it to find new pages fast.
+from email.utils import format_datetime
+def rfc822(d):
+    return format_datetime(datetime.datetime.fromisoformat(d + "T09:00:00+00:00"))
+items = []
+for a in sorted(articles, key=lambda a: (a.get("updated", a["date"]), a["date"]), reverse=True)[:20]:
+    items.append(f"""    <item>
+      <title>{html.escape(a["h1"])}</title>
+      <link>{canonical(a["path"])}</link>
+      <guid isPermaLink="true">{canonical(a["path"])}</guid>
+      <pubDate>{rfc822(a["date"])}</pubDate>
+      <category>{a["category"]}</category>
+      <description>{html.escape(a["description"])}</description>
+    </item>""")
+newest = max(a.get("updated", a["date"]) for a in articles)
+with open(os.path.join(OUT, "feed.xml"), "w", encoding="utf-8") as fh:
+    fh.write(f"""<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>{BRAND} guides</title>
+    <link>{SITE}/</link>
+    <atom:link href="{SITE}/feed.xml" rel="self" type="application/rss+xml"/>
+    <description>Plain-English guides to US car and home insurance.</description>
+    <language>en-us</language>
+    <lastBuildDate>{rfc822(newest)}</lastBuildDate>
+""" + "\n".join(items) + """
+  </channel>
+</rss>
+""")
+print("wrote feed.xml", len(items), "items")

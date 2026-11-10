@@ -16,6 +16,8 @@ This folder is excluded from the live site by `.assetsignore`.
    (under 160 characters), `path: guides/<slug>.html`, `section: guides/index.html`, `type: article`,
    `category: Car insurance` or `Home insurance`, `date: YYYY-MM-DD`, and `related:` with three existing guide paths.
    Also `takeaways:` with 3 or 4 short key points separated by ` | ` (shown in a "Key takeaways" box).
+   Required `topic:` with one topic cluster from `TOPICS` in `build.py`. Car insurance: Coverage basics, Costs and savings, Claims and accidents, Car loans and leases, Drivers and special situations. Home insurance: What homeowners insurance covers, Costs and deductibles, Renters and condo owners, Extra protection. The build stops if it is missing.
+   Add at least 2 in-text links TO the new guide from older related guides (not only the "related:" cards), so it is never an orphan page.
    Optional `sources:` with extra source ids from `SOURCES` in `build.py`, comma-separated (for example `sources: cfpb-auto` for loan topics, `cfpb-crc` for claims history, `floodsmart, fema-msc` for flood). Default sources for the category are always added, and a "Sources and official resources" box is generated. Add new ids to `SOURCES` only for stable pages of government agencies, the NAIC, or nonprofit institutes.
    Link a free tool where it fits: `gap-insurance-quiz.html` (loans, leases, gap, new cars), `liability-coverage-calculator.html` (limits, umbrella, how much coverage), `calculator.html` (prices).
    Optional `updated: YYYY-MM-DD` when an existing guide is revised (shown as "Updated" next to the publication date).

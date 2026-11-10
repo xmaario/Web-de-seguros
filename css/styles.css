@@ -2255,3 +2255,12 @@ input[type="text"][inputmode="numeric"] {
 .prose .card-grid {
   margin: 2rem 0;
 }
+
+/* Topic clusters on hub pages */
+.topic-title {
+  font-size: 1.3125rem;
+  margin: 2.25rem 0 1rem;
+}
+.related .topic-title:first-of-type {
+  margin-top: 1rem;
+}
