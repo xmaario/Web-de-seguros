@@ -2308,3 +2308,12 @@ input[type="text"][inputmode="numeric"] {
 #search {
   scroll-margin-top: calc(var(--header-h) + 1.5rem);
 }
+
+/* Spam trap field on the contact form: hidden from people, visible to bots */
+.hp-field {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}

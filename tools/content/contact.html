@@ -8,9 +8,14 @@ type: page
       <p class="lead">Have a question, correction, or feedback about our content? Send us a message or email <a href="mailto:unpackinsurance@gmail.com">unpackinsurance@gmail.com</a>.</p>
       <p>Please note: we are not an insurance company or agency. We cannot provide quotes, make changes to a policy, or handle claims. For those requests, contact your insurer or agent directly. Do not include sensitive information such as Social Security numbers, policy numbers, or medical details in your message.</p>
 
-      <!-- Paste your form service endpoint (for example https://formspree.io/f/xxxxxxx) into data-endpoint.
-           While it is empty, the form stays hidden and visitors see the email option only. -->
-      <form id="contact-form" class="form" action="" method="post" data-endpoint="" novalidate hidden>
+      <!-- The form posts to /api/contact (src/worker.js), which emails the message to the site owner.
+           If data-endpoint is empty, the form stays hidden and visitors see the email option only. -->
+      <form id="contact-form" class="form" action="" method="post" data-endpoint="/api/contact" novalidate hidden>
+        <div class="hp-field" aria-hidden="true">
+          <label for="website">Leave this field empty</label>
+          <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
+        </div>
+        <input type="hidden" name="started" value="">
         <div class="field">
           <label for="name">Name <span class="required">(required)</span></label>
           <input id="name" name="name" type="text" autocomplete="name" required aria-describedby="name-error">
@@ -53,7 +58,7 @@ type: page
             <dt>Legal basis</dt>
             <dd>Your consent.</dd>
             <dt>Recipients</dt>
-            <dd>Formspree, Inc. as our service provider. Data may be transferred to the US with appropriate safeguards.</dd>
+            <dd>Cloudflare, Inc. delivers the message to our Gmail inbox (Google). Data may be transferred to the US with appropriate safeguards.</dd>
             <dt>Your rights</dt>
             <dd>Access, rectification, erasure, and other rights described in our <a href="privacy-policy.html">Privacy Policy</a>.</dd>
           </dl>

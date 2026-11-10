@@ -267,7 +267,7 @@
   }
 
   /* Contact form.
-   * Sends to the form service URL in the form's data-endpoint attribute (for example Formspree).
+   * Sends to the form service URL in the form's data-endpoint attribute (/api/contact, handled by src/worker.js).
    * If no endpoint is set, the form stays hidden and only the email option is shown. */
   var contactForm = document.getElementById("contact-form");
   var confirmation = document.getElementById("contact-confirmation");
@@ -277,7 +277,8 @@
   if (contactForm && confirmation) {
     var endpoint = (contactForm.getAttribute("data-endpoint") || "").trim();
 
-    if (/^https:\/\//.test(endpoint)) {
+    if (/^(https:\/\/|\/)/.test(endpoint)) {
+      if (contactForm.elements.started) contactForm.elements.started.value = String(Date.now());
       contactForm.hidden = false;
       contactForm.setAttribute("action", endpoint);
       if (fallback) fallback.hidden = true;

@@ -49,16 +49,14 @@ Haz buscar y reemplazar en todo el proyecto. Para encontrarlos: `grep -rn "\[[A-
 | `ca-pub-XXXXXXXXXXXXXXXX` (todas las páginas) y `pub-XXXXXXXXXXXXXXXX` (`ads.txt`) | ⏳ Pendiente: tu ID de AdSense cuando te aprueben |
 
 ## Paso 5. Formulario de contacto
-- Mientras `data-endpoint` esté vacío en `contact.html`, el formulario no se muestra y la página solo ofrece el email. Esto ya es correcto legalmente.
-- Para activarlo:
-  1. Crea un formulario gratuito en https://formspree.io.
-  2. Copia la URL (`https://formspree.io/f/xxxxxxx`) en `data-endpoint="..."`.
-  3. Pon "Formspree, Inc." en `[FORM PROVIDER]`.
+- El formulario envía a `/api/contact` (código en `src/worker.js`). El Worker manda cada mensaje a unpackinsurance@gmail.com con Cloudflare Email Routing (gratis), desde contact@unpackinsurance.com, con "Responder a" = email del visitante.
+- Requisito (una vez): en Cloudflare, Email Routing activado en unpackinsurance.com y unpackinsurance@gmail.com verificado como dirección de destino.
+- Antispam: campo trampa oculto, tiempo mínimo de 3 s y máximo 5 mensajes por minuto por IP.
 - El formulario ya incluye la casilla obligatoria de aceptación de la privacidad y la información básica de protección de datos.
 
 ## Paso 6. Protección de datos (RGPD y LOPDGDD)
 1. Usa la herramienta gratuita **Facilita RGPD** de la AEPD (https://www.aepd.es) para generar tu registro básico de actividades de tratamiento. Para una web pequeña tarda unos 15 minutos.
-2. Guarda los DPA de tus proveedores (hosting, Formspree; Google los incluye en los términos de AdSense).
+2. Guarda los DPA de tus proveedores (Cloudflare; Google los incluye en los términos de AdSense).
 3. Atiende las solicitudes de derechos (acceso, supresión…) en el plazo de **un mes**.
 4. No necesitas Delegado de Protección de Datos (DPO) para una web de este tamaño.
 
