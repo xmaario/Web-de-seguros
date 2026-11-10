@@ -306,7 +306,7 @@ def jsonld(meta):
             "image": [OG_IMAGE],
             "datePublished": meta["date"],
             "dateModified": meta.get("updated", meta["date"]),
-            "author": {"@type": "Person", "name": AUTHOR, "url": canonical("author.html"), "jobTitle": "Founder and editor", "worksFor": {"@id": SITE + "/#organization"}},
+            "author": {"@type": "Person", "name": AUTHOR, "url": canonical("author.html"), "image": SITE + "/images/author-mario.jpg", "jobTitle": "Founder and editor", "worksFor": {"@id": SITE + "/#organization"}},
             "publisher": org,
             "mainEntityOfPage": canonical(meta["path"]),
             "articleSection": meta["category"],
@@ -324,6 +324,17 @@ def jsonld(meta):
             "isPartOf": {"@type": "WebSite", "name": BRAND, "url": SITE + "/"},
             "inLanguage": "en-US",
         })
+    if meta["path"] == "author.html":
+        graph[-1]["@type"] = "ProfilePage"
+        graph[-1]["mainEntity"] = {
+            "@type": "Person",
+            "@id": SITE + "/author#person",
+            "name": AUTHOR,
+            "jobTitle": "Founder and editor",
+            "image": SITE + "/images/author-mario.jpg",
+            "url": canonical("author.html"),
+            "worksFor": {"@id": SITE + "/#organization"},
+        }
     if t == "glossary":
         terms = re.findall(r'<dt id="([^"]+)">(.*?)</dt>\s*<dd>(.*?)</dd>', meta["body"], re.S)
         graph.append({

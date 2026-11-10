@@ -30,7 +30,7 @@
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
   <link rel="manifest" href="site.webmanifest">
   <link rel="alternate" type="application/rss+xml" title="UnpackInsurance guides" href="https://unpackinsurance.com/feed.xml">
-  <link rel="stylesheet" href="css/styles.css?v=cf6932e7">
+  <link rel="stylesheet" href="css/styles.css?v=753238f4">
   <script src="js/main.js?v=085710ef" defer></script>
   <script src="js/integrations.js?v=cc237145" defer></script>
   <script type="application/ld+json">
@@ -38,7 +38,7 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "WebPage",
+      "@type": "ProfilePage",
       "name": "Mario González Ordóñez",
       "description": "Meet the founder and editor of UnpackInsurance, how our car and home insurance guides are researched and written, and the sources we rely on.",
       "url": "https://unpackinsurance.com/author",
@@ -47,7 +47,18 @@
         "name": "UnpackInsurance",
         "url": "https://unpackinsurance.com/"
       },
-      "inLanguage": "en-US"
+      "inLanguage": "en-US",
+      "mainEntity": {
+        "@type": "Person",
+        "@id": "https://unpackinsurance.com/author#person",
+        "name": "Mario González Ordóñez",
+        "jobTitle": "Founder and editor",
+        "image": "https://unpackinsurance.com/images/author-mario.jpg",
+        "url": "https://unpackinsurance.com/author",
+        "worksFor": {
+          "@id": "https://unpackinsurance.com/#organization"
+        }
+      }
     },
     {
       "@type": "BreadcrumbList",
@@ -100,8 +111,16 @@
 
   <main id="main">
     <div class="container prose">
-      <h1>Mario González Ordóñez</h1>
-      <p class="lead">Founder and editor of UnpackInsurance.</p>
+      <div class="author-head">
+        <picture>
+          <source srcset="images/author-mario.webp" type="image/webp">
+          <img class="author-photo" src="images/author-mario.jpg" alt="Mario González Ordóñez" width="480" height="480">
+        </picture>
+        <div>
+          <h1>Mario González Ordóñez</h1>
+          <p class="lead">Founder and editor of UnpackInsurance.</p>
+        </div>
+      </div>
 
       <h2>About me</h2>
       <p>I started UnpackInsurance because insurance is one of the most important purchases people make, yet the language in quotes and policies often makes it hard to understand what you are actually buying. My goal is simple: explain car and home insurance in plain English so you can ask better questions, compare offers fairly, and avoid surprises when you need to make a claim.</p>
