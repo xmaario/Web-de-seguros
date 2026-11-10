@@ -647,7 +647,8 @@ main:focus {
   transform: translateY(-2px);
 }
 
-.card-link h3 a::after {
+.card-link h3 a::after,
+.card-link h2 a::after {
   /* Make the whole card clickable */
   content: "";
   position: absolute;
@@ -655,7 +656,8 @@ main:focus {
   border-radius: var(--radius);
 }
 
-.card-link h3 a:focus-visible {
+.card-link h3 a:focus-visible,
+.card-link h2 a:focus-visible {
   outline: none;
 }
 
@@ -664,16 +666,19 @@ main:focus {
   outline-offset: 3px;
 }
 
-.card h3 {
+.card h3,
+.card h2 {
   margin: 0 0 0.5rem;
   font-size: 1.25rem;
 }
 
-.card h3 a {
+.card h3 a,
+.card h2 a {
   color: var(--text);
 }
 
-.card h3 a:hover {
+.card h3 a:hover,
+.card h2 a:hover {
   text-decoration: none;
 }
 
@@ -2200,4 +2205,53 @@ legend {
   .data-list dd {
     margin-bottom: 0.6rem;
   }
+}
+
+/* ---------- Free tools ---------- */
+.segmented-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+.segmented-3 label {
+  text-align: center;
+  padding: 0 0.25rem;
+}
+input[type="text"][inputmode="numeric"] {
+  max-width: 20rem;
+}
+
+/* ---------- Sources at the end of guides ---------- */
+.sources {
+  margin: 2.5rem 0 1.5rem;
+  padding: 1.5rem 1.75rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+.sources h2 {
+  margin-top: 0;
+  font-size: 1.3125rem;
+}
+.sources > p {
+  color: var(--muted);
+}
+.sources ul {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+.sources li {
+  margin: 0.5rem 0;
+}
+.source-org {
+  display: block;
+  color: var(--muted);
+  font-size: 1rem;
+}
+.prose .card h2 {
+  margin: 0.25rem 0 0.5rem;
+  font-size: 1.25rem;
+}
+.prose .card h2 a {
+  text-decoration: none;
+}
+.prose .card-grid {
+  margin: 2rem 0;
 }

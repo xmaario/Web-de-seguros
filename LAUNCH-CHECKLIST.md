@@ -107,3 +107,24 @@ Suele ser un servicio de precio cerrado.
 - **Antes de cobrar comisiones de aseguradoras o de captación de clientes**, comprueba los requisitos de licencia de agente en cada estado de EE. UU. Mientras solo uses AdSense no hace falta licencia.
 - La cabecera y el pie están copiados en cada HTML: cámbialos con buscar y reemplazar en todos los archivos.
 - Las tarifas de `js/calculator.js` son de ejemplo, no datos actuariales.
+
+## Paso 11. Enlaces de periodistas (Qwoted y Featured.com)
+Objetivo: que periodistas te citen y enlacen (backlinks de calidad). Gratis.
+
+1. Regístrate en https://www.qwoted.com (elige "Expert / Source") y en https://featured.com (cuenta "Expert").
+2. Perfil (copia y pega, en inglés):
+   - **Name:** Mario González Ordóñez
+   - **Title:** Founder and Editor, UnpackInsurance
+   - **Website:** https://unpackinsurance.com
+   - **Bio (corta):** Founder and editor of UnpackInsurance, a free, ad-supported site that explains US car and home insurance in plain English. I write about coverage basics, deductibles, gap insurance, claims, and how to compare quotes, and I built free tools such as a gap insurance quiz and a liability limits calculator.
+   - **Topics:** car insurance, auto insurance, homeowners insurance, renters insurance, gap insurance, insurance claims, personal finance, consumer tips.
+3. Responde solo a peticiones de tu tema (car/home insurance, car loans, personal finance). 3–5 por semana.
+4. Plantilla de respuesta (adáptala; mándamela y la pulo):
+   > Hi [name], I'm Mario González Ordóñez, founder and editor of UnpackInsurance (unpackinsurance.com), where I explain car and home insurance in plain English.
+   > [2–4 frases que respondan exactamente a la pregunta, con un consejo práctico.]
+   > Readers can check their own situation with our free [gap insurance quiz / liability limits calculator]: [enlace].
+   > Happy to help with anything else.
+5. Reglas: no te presentes como agente con licencia ni asesor; no des precios inventados ni estadísticas sin fuente; nunca nombres aseguradoras.
+
+## Paso 12. Pedir enlaces a las herramientas (opcional)
+Las páginas https://unpackinsurance.com/tools, /gap-insurance-quiz y /liability-coverage-calculator son "enlazables". Ideas: blogs de finanzas personales, foros de compradores de coches, cooperativas de crédito (credit unions) con secciones de recursos. Mensaje corto ofreciendo la herramienta gratis, sin registro.

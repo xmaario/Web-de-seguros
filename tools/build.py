@@ -20,7 +20,7 @@ OG_IMAGE = SITE + "/images/og-image.png"
 NAV = [
     ("car-insurance.html", "Car Insurance"),
     ("home-insurance.html", "Home Insurance"),
-    ("calculator.html", "Calculator"),
+    ("tools.html", "Tools"),
     ("guides/index.html", "Guides"),
     ("glossary.html", "Glossary"),
     ("about.html", "About"),
@@ -41,6 +41,47 @@ ART = {"Car insurance": "images/illustration-car.svg", "Home insurance": "images
 CAT_CLASS = {"Car insurance": "cat-car", "Home insurance": "cat-home"}
 
 CUR = ' aria-current="page"'
+
+# Official and authoritative sources listed at the end of guides ("sources:" header, comma-separated ids).
+# Only stable pages of government agencies, state regulators' association and nonprofit institutes.
+SOURCES = {
+    "naic-doi": ("Find your state insurance department",
+                 "National Association of Insurance Commissioners (NAIC)",
+                 "https://content.naic.org/state-insurance-departments"),
+    "naic": ("Consumer insurance information and complaint tools",
+             "National Association of Insurance Commissioners (NAIC)",
+             "https://content.naic.org/"),
+    "iii-auto": ("Auto insurance basics",
+                 "Insurance Information Institute (Triple-I)",
+                 "https://www.iii.org/publication/insurance-handbook/insurance-basics/auto-insurance-basics"),
+    "cfpb-auto": ("Auto loans: tools and guides",
+                  "Consumer Financial Protection Bureau (CFPB)",
+                  "https://www.consumerfinance.gov/consumer-tools/auto-loans/"),
+    "cfpb-crc": ("List of consumer reporting companies, including insurance claims history reports",
+                 "Consumer Financial Protection Bureau (CFPB)",
+                 "https://www.consumerfinance.gov/consumer-tools/credit-reports-and-scores/consumer-reporting-companies/companies-list/"),
+    "nhtsa-recalls": ("Check your vehicle for safety recalls",
+                      "National Highway Traffic Safety Administration (NHTSA)",
+                      "https://www.nhtsa.gov/recalls"),
+    "floodsmart": ("National Flood Insurance Program (NFIP)",
+                   "FEMA, FloodSmart.gov",
+                   "https://www.floodsmart.gov/"),
+    "fema-msc": ("Flood Map Service Center",
+                 "Federal Emergency Management Agency (FEMA)",
+                 "https://msc.fema.gov/portal/home"),
+}
+DEFAULT_SOURCES = {
+    "Car insurance": ["naic-doi", "iii-auto"],
+    "Home insurance": ["naic-doi", "naic"],
+}
+
+
+def guide_sources(meta):
+    ids = [x.strip() for x in meta.get("sources", "").split(",") if x.strip()]
+    for d in DEFAULT_SOURCES.get(meta.get("category"), []):
+        if d not in ids:
+            ids.append(d)
+    return [SOURCES[i] for i in ids]
 
 AD_SLOT = ('<aside class="ad-slot" data-ad-key="{key}" aria-label="Advertisement" hidden>'
            '<p class="ad-label">Advertisement</p></aside>')
@@ -163,6 +204,8 @@ def breadcrumbs(meta):
     crumbs = [("Home", "index.html")]
     if path.startswith("guides/") and path != "guides/index.html":
         crumbs.append(("Guides", "guides/index.html"))
+    elif meta.get("section") == "tools.html" and path != "tools.html":
+        crumbs.append(("Tools", "tools.html"))
     crumbs.append((meta["h1"], path))
     return crumbs
 
@@ -200,6 +243,8 @@ def jsonld(meta):
             "mainEntityOfPage": canonical(meta["path"]),
             "articleSection": meta["category"],
             "wordCount": meta["words"],
+            "citation": [{"@type": "CreativeWork", "name": t_, "publisher": {"@type": "Organization", "name": o_}, "url": u_}
+                         for t_, o_, u_ in guide_sources(meta)],
             "inLanguage": "en-US",
         })
     else:
@@ -307,6 +352,16 @@ def article_body(meta, body, prefix):
     body = body.replace('\n      <h2 id="the-bottom-line">',
                         "\n      " + AD_SLOT.format(key="inArticle2") + '\n      <h2 id="the-bottom-line">', 1)
 
+    src = guide_sources(meta)
+    if src:
+        items = "\n".join(f'          <li><a href="{u}" rel="noopener">{t_}</a> <span class="source-org">{o_}</span></li>'
+                          for t_, o_, u in src)
+        block = ('      <section class="sources" aria-labelledby="sources-h">\n'
+                 '        <h2 id="sources-h">Sources and official resources</h2>\n'
+                 '        <p>Rules and requirements vary by state. These official and nonprofit resources can help you check details for your situation.</p>\n'
+                 f'        <ul>\n{items}\n        </ul>\n      </section>\n\n')
+        body = body.replace('      <p class="note">', block + '      <p class="note">', 1)
+
     related = [by_path[p.strip()] for p in meta.get("related", "").split(",") if p.strip()]
     if related:
         block = ('      <section class="related" aria-labelledby="related-h">\n'
@@ -335,6 +390,8 @@ def footer(prefix):
                                ("guides/do-you-need-flood-insurance.html", "Flood insurance"),
                                ("guides/renters-insurance-basics.html", "Renters insurance")]),
         col("Tools", [("calculator.html", "Estimate calculator"),
+                      ("gap-insurance-quiz.html", "Gap insurance quiz"),
+                      ("liability-coverage-calculator.html", "Liability limits calculator"),
                       ("guides/index.html", "All guides"),
                       ("glossary.html", "Glossary")]),
         col("Company", [("about.html", "About us"),
