@@ -2264,3 +2264,47 @@ input[type="text"][inputmode="numeric"] {
 .related .topic-title:first-of-type {
   margin-top: 1rem;
 }
+
+/* Header search icon */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+.header-search {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: var(--text);
+}
+.header-search:hover {
+  text-decoration: none;
+  background: rgba(118, 118, 128, 0.12);
+}
+.header-search:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+@media (min-width: 64em) {
+  .site-nav { order: 2; margin-left: auto; }
+  .header-actions { order: 3; margin-left: 0.5rem; }
+}
+
+/* Glossary matches under the guide search */
+.glossary-matches {
+  list-style: none;
+  margin: 0.75rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem 1.25rem;
+  color: var(--muted);
+}
+
+#search {
+  scroll-margin-top: calc(var(--header-h) + 1.5rem);
+}

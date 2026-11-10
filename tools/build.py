@@ -500,6 +500,14 @@ def render(meta):
     body = expand_guides(body, prefix, current=path)
     if t == "glossary":
         body = link_glossary(body, prefix)
+    if "<!--GLOSSARY-JSON-->" in body:
+        gl = by_path["glossary.html"]["body"]
+        terms = [{"id": i, "name": html.unescape(re.sub("<[^>]+>", "", n)).strip(),
+                  "text": html.unescape(re.sub(r"\s+", " ", re.sub("<[^>]+>", "", d))).strip()}
+                 for i, n, d in re.findall(r'<dt id="([^"]+)">(.*?)</dt>\s*<dd>(.*?)</dd>', gl, re.S)]
+        body = body.replace("<!--GLOSSARY-JSON-->",
+                            '<script type="application/json" id="glossary-data">'
+                            + json.dumps(terms, ensure_ascii=False).replace("</", "<\\/") + "</script>")
     body = body.replace("<!--COUNT:guides-->", str(len(articles)))
     if "<!--COUNT:terms-->" in body:
         gl = by_path.get("glossary.html")
@@ -565,10 +573,15 @@ def render(meta):
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="{prefix}index.html">{LOGO_SVG}<span>{BRAND}</span></a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
-        <span class="nav-toggle-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Menu</span>
-      </button>
+      <div class="header-actions">
+        <a class="header-search" href="{prefix}guides/index.html#search" aria-label="Search guides and glossary">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M15.5 15.5L21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+          <span class="nav-toggle-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Menu</span>
+        </button>
+      </div>
       <nav id="site-nav" class="site-nav" aria-label="Main">
         <ul>
 {nav_html}

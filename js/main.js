@@ -198,6 +198,11 @@
     var cards = Array.prototype.slice.call(document.querySelectorAll(".page-collection .card"));
     var headings = Array.prototype.slice.call(document.querySelectorAll(".page-collection h2.section-title"));
     var status = document.getElementById("guide-search-status");
+    var glossaryList = document.getElementById("glossary-matches");
+    var glossary = [];
+    try {
+      glossary = JSON.parse(document.getElementById("glossary-data").textContent);
+    } catch (e) {}
     searchInput.addEventListener("input", function () {
       var q = searchInput.value.trim().toLowerCase();
       var shown = 0;
@@ -221,8 +226,44 @@
         }
         h.hidden = !any;
       });
-      status.textContent = q ? (shown ? shown + (shown === 1 ? " guide found" : " guides found") : "No guides match. Try another word.") : "";
+      /* Matching glossary terms, shown as links under the search box */
+      var termsShown = 0;
+      if (glossaryList) {
+        glossaryList.innerHTML = "";
+        if (q.length >= 2) {
+          glossary.filter(function (t) {
+            return t.name.toLowerCase().indexOf(q) !== -1;
+          }).concat(glossary.filter(function (t) {
+            return t.name.toLowerCase().indexOf(q) === -1 && t.text.toLowerCase().indexOf(q) !== -1;
+          })).slice(0, 4).forEach(function (t) {
+            var li = document.createElement("li");
+            var a = document.createElement("a");
+            a.href = "../glossary#" + t.id;
+            a.textContent = t.name;
+            li.appendChild(document.createTextNode("Glossary: "));
+            li.appendChild(a);
+            glossaryList.appendChild(li);
+            termsShown++;
+          });
+        }
+        glossaryList.hidden = !termsShown;
+      }
+      var termsText = termsShown ? " · " + termsShown + (termsShown === 1 ? " glossary term" : " glossary terms") : "";
+      status.textContent = q ? (shown ? shown + (shown === 1 ? " guide found" : " guides found") + termsText
+        : (termsShown ? "No guides match" + termsText : "No guides match. Try another word.")) : "";
     });
+
+    /* Search icon in the header links here with #search; ?q= pre-fills the box */
+    var params = new URLSearchParams(window.location.search);
+    if (params.get("q")) {
+      searchInput.value = params.get("q");
+      searchInput.dispatchEvent(new Event("input"));
+    }
+    if (window.location.hash === "#search" || params.get("q")) {
+      var focusSearch = function () { searchInput.focus(); };
+      focusSearch();
+      window.addEventListener("load", function () { window.setTimeout(focusSearch, 50); });
+    }
   }
 
   /* Contact form.
