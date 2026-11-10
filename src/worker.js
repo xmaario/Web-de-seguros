@@ -15,6 +15,7 @@ function json(status, body) {
 
 async function handleContact(request, env) {
   if (request.method !== "POST") return json(405, { ok: false, error: "method" });
+  if (!env.EMAIL) return json(503, { ok: false, error: "disabled" });
 
   // Only accept posts from our own pages (same origin as the request).
   const origin = request.headers.get("Origin") || "";
