@@ -431,6 +431,23 @@ def article_body(meta, body, prefix):
     body = body.replace('\n      <h2 id="the-bottom-line">',
                         "\n      " + AD_SLOT.format(key="inArticle2") + '\n      <h2 id="the-bottom-line">', 1)
 
+    # Tables: label each cell with its column heading so small screens can show rows as cards.
+    def label_table(m):
+        t = m.group(0)
+        heads = [re.sub("<[^>]+>", "", h).strip() for h in re.findall(r"<th scope=\"col\">(.*?)</th>", t)]
+        def row(rm):
+            cells = re.findall(r"<(t[hd])([^>]*)>(.*?)</t[hd]>", rm.group(0))
+            out, col = [], 0
+            for tag, attrs, inner in cells:
+                if tag == "td" and col < len(heads) and heads[col] and "data-label" not in attrs:
+                    attrs += f' data-label="{html.escape(heads[col])}"'
+                out.append(f"<{tag}{attrs}>{inner}</{tag}>")
+                span = re.search(r'colspan="(\d+)"', attrs)
+                col += int(span.group(1)) if span else 1
+            return "<tr>" + "".join(out) + "</tr>"
+        return re.sub(r"<tbody>.*?</tbody>", lambda b: re.sub(r"<tr>.*?</tr>", row, b.group(0), flags=re.S), t, flags=re.S)
+    body = re.sub(r'<div class="table-wrap">.*?</div>', label_table, body, flags=re.S)
+
     src = guide_sources(meta)
     if src:
         items = "\n".join(f'          <li><a href="{u}" rel="noopener">{t_}</a> <span class="source-org">{o_}</span></li>'

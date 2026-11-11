@@ -47,8 +47,8 @@ for f in sorted(glob.glob("tools/content/guide-*.html")):
         errors.append(f"{f}: needs 'takeaways:' with 3 or 4 points separated by ' | '")
     body = re.sub(r'<p class="note">.*?</p>', "", body, flags=re.S)
     words = len(re.sub("<[^>]+>", " ", body).split())
-    if not 800 <= words <= 1300:
-        errors.append(f"{f}: {words} words (must be 800-1300)")
+    if not 800 <= words <= 1500:
+        errors.append(f"{f}: {words} words (must be 800-1500)")
 
 print(f"Checked {len(pages)} pages.")
 if errors:

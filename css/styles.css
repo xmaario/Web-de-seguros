@@ -2361,3 +2361,43 @@ input[type="text"][inputmode="numeric"] {
   .author-head { flex-direction: column; align-items: flex-start; }
   .author-photo { width: 6rem; height: 6rem; }
 }
+
+/* Comparison tables in guides: show each row as a card on small screens */
+@media (max-width: 40em) {
+  article.prose .table-wrap {
+    border: 0;
+    overflow: visible;
+  }
+  article.prose .table-wrap table {
+    min-width: 0;
+  }
+  article.prose .table-wrap thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+  }
+  article.prose .table-wrap tr {
+    display: block;
+    margin: 0 0 0.75rem;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--hairline);
+    border-radius: var(--radius-sm);
+  }
+  article.prose .table-wrap th,
+  article.prose .table-wrap td {
+    display: block;
+    padding: 0.25rem 0;
+    border: 0;
+  }
+  article.prose .table-wrap tbody th {
+    font-size: 1.0625rem;
+    padding-bottom: 0.4rem;
+  }
+  article.prose .table-wrap td[data-label]::before {
+    content: attr(data-label) ": ";
+    font-weight: 600;
+    color: var(--muted);
+  }
+}

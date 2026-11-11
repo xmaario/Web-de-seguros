@@ -6,7 +6,39 @@
     <atom:link href="https://unpackinsurance.com/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Plain-English guides to US car and home insurance.</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 10 Nov 2026 09:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 11 Nov 2026 09:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Comprehensive vs. Collision Coverage: What&#x27;s the Difference?</title>
+      <link>https://unpackinsurance.com/guides/comprehensive-vs-collision-coverage</link>
+      <guid isPermaLink="true">https://unpackinsurance.com/guides/comprehensive-vs-collision-coverage</guid>
+      <pubDate>Thu, 05 Nov 2026 09:00:00 +0000</pubDate>
+      <category>Car insurance</category>
+      <description>The difference between comprehensive and collision car insurance, what each covers, when lenders require them, and how to decide if you need both.</description>
+    </item>
+    <item>
+      <title>How Car Insurance Deductibles Work</title>
+      <link>https://unpackinsurance.com/guides/car-insurance-deductibles-explained</link>
+      <guid isPermaLink="true">https://unpackinsurance.com/guides/car-insurance-deductibles-explained</guid>
+      <pubDate>Wed, 04 Nov 2026 09:00:00 +0000</pubDate>
+      <category>Car insurance</category>
+      <description>How car insurance deductibles work for collision and comprehensive claims, when you pay them, how they affect your premium, and how to choose the right amount.</description>
+    </item>
+    <item>
+      <title>How Much Car Insurance Do You Really Need?</title>
+      <link>https://unpackinsurance.com/guides/how-much-car-insurance-do-you-need</link>
+      <guid isPermaLink="true">https://unpackinsurance.com/guides/how-much-car-insurance-do-you-need</guid>
+      <pubDate>Tue, 03 Nov 2026 09:00:00 +0000</pubDate>
+      <category>Car insurance</category>
+      <description>State minimums are only a starting point. Learn how to choose liability limits, decide on collision and comprehensive, and match coverage to your finances.</description>
+    </item>
+    <item>
+      <title>How to File a Car Insurance Claim, Step by Step</title>
+      <link>https://unpackinsurance.com/guides/how-to-file-a-car-insurance-claim</link>
+      <guid isPermaLink="true">https://unpackinsurance.com/guides/how-to-file-a-car-insurance-claim</guid>
+      <pubDate>Tue, 03 Nov 2026 09:00:00 +0000</pubDate>
+      <category>Car insurance</category>
+      <description>What to do after a car accident and how to file an auto claim: documenting the scene, reporting the claim, working with the adjuster, and resolving disputes.</description>
+    </item>
     <item>
       <title>Does Car Insurance Cover Uber and Lyft Driving? Rideshare Insurance Explained</title>
       <link>https://unpackinsurance.com/guides/rideshare-insurance-explained</link>
@@ -24,36 +56,12 @@
       <description>Gap insurance may cover the difference between your car loan or lease balance and the car&#x27;s value if it is totaled. Learn when it is worth it.</description>
     </item>
     <item>
-      <title>How to File a Car Insurance Claim, Step by Step</title>
-      <link>https://unpackinsurance.com/guides/how-to-file-a-car-insurance-claim</link>
-      <guid isPermaLink="true">https://unpackinsurance.com/guides/how-to-file-a-car-insurance-claim</guid>
-      <pubDate>Tue, 03 Nov 2026 09:00:00 +0000</pubDate>
-      <category>Car insurance</category>
-      <description>What to do after a car accident and how to file an auto claim: documenting the scene, reporting the claim, working with the adjuster, and resolving disputes.</description>
-    </item>
-    <item>
       <title>Upside Down on Your Car Loan? Your Options Explained</title>
       <link>https://unpackinsurance.com/guides/upside-down-car-loan</link>
       <guid isPermaLink="true">https://unpackinsurance.com/guides/upside-down-car-loan</guid>
       <pubDate>Mon, 09 Nov 2026 09:00:00 +0000</pubDate>
       <category>Car insurance</category>
       <description>What it means to be upside down on a car loan, why it matters if your car is totaled, and the options that may help, from gap coverage to paying down principal.</description>
-    </item>
-    <item>
-      <title>Comprehensive vs. Collision Coverage: What&#x27;s the Difference?</title>
-      <link>https://unpackinsurance.com/guides/comprehensive-vs-collision-coverage</link>
-      <guid isPermaLink="true">https://unpackinsurance.com/guides/comprehensive-vs-collision-coverage</guid>
-      <pubDate>Thu, 05 Nov 2026 09:00:00 +0000</pubDate>
-      <category>Car insurance</category>
-      <description>The difference between comprehensive and collision car insurance, what each covers, when lenders require them, and how to decide if you need both.</description>
-    </item>
-    <item>
-      <title>How Much Car Insurance Do You Really Need?</title>
-      <link>https://unpackinsurance.com/guides/how-much-car-insurance-do-you-need</link>
-      <guid isPermaLink="true">https://unpackinsurance.com/guides/how-much-car-insurance-do-you-need</guid>
-      <pubDate>Tue, 03 Nov 2026 09:00:00 +0000</pubDate>
-      <category>Car insurance</category>
-      <description>State minimums are only a starting point. Learn how to choose liability limits, decide on collision and comprehensive, and match coverage to your finances.</description>
     </item>
     <item>
       <title>How to Lower Your Car Insurance Premium</title>
@@ -86,14 +94,6 @@
       <pubDate>Wed, 04 Nov 2026 09:00:00 +0000</pubDate>
       <category>Car insurance</category>
       <description>How long accidents, tickets, and claims can affect your car insurance, how your driving record differs from claims history, and how to check both.</description>
-    </item>
-    <item>
-      <title>How Car Insurance Deductibles Work</title>
-      <link>https://unpackinsurance.com/guides/car-insurance-deductibles-explained</link>
-      <guid isPermaLink="true">https://unpackinsurance.com/guides/car-insurance-deductibles-explained</guid>
-      <pubDate>Wed, 04 Nov 2026 09:00:00 +0000</pubDate>
-      <category>Car insurance</category>
-      <description>How car insurance deductibles work for collision and comprehensive claims, when you pay them, how they affect your premium, and how to choose the right amount.</description>
     </item>
     <item>
       <title>Does Homeowners Insurance Cover Roof Damage?</title>
