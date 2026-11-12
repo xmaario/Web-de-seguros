@@ -134,3 +134,19 @@ Mario
 - Never offer money, a link back, or "guest post" swaps.
 - Keep a simple log: date, site, page URL, contact, sent, follow-up, result.
 - When someone adds the link, say thank you.
+
+## Log
+
+| Date drafted | Site | Page | Contact | Status |
+|---|---|---|---|---|
+| 2026-11-12 | UW-Whitewater Andersen Library | Financial Literacy guide, Understanding Insurance | refdesk@uww.edu | Draft in Gmail |
+| 2026-11-12 | Green River College Library | Financial Literacy guide | librarian@greenriver.edu | Draft in Gmail |
+| 2026-11-12 | Mendocino College Library | Financial Literacy guide | librarian@mendocino.edu | Draft in Gmail |
+| 2026-11-12 | Flint Hills Technical College | Financial Literacy Resources guide | lworthen@fhtc.edu | Draft in Gmail |
+| 2026-11-12 | Clinton Public Library (Iowa) | Financial Resources page | reference@clintonpubliclibrary.us | Draft in Gmail |
+| 2026-11-12 | Miami Public Library (Oklahoma) | Financial Literacy page | librarystaff@miamiokla.net | Draft in Gmail |
+
+Next candidates: Cal State East Bay Personal Finance guide (libhelp@csueastbay.libanswers.com),
+Boston College Personal Finance guide (email via guide), Atlanta University Center Financial Literacy guide (business librarian),
+Elizabethtown CTC Financial Literacy guide (Katie Meyer).
+Skipped: Middletown Thrall Library (no public email, only a form).
