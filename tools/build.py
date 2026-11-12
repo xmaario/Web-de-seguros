@@ -14,6 +14,7 @@ CLEAN = "--html-links" not in sys.argv
 SITE = "https://unpackinsurance.com"
 BRAND = "UnpackInsurance"
 AUTHOR = "Mario González Ordóñez"
+AUTHOR_LINKEDIN = "https://www.linkedin.com/in/mario-gonz%C3%A1lez-ord%C3%B3%C3%B1ez-08722b44b"
 ADSENSE = "ca-pub-XXXXXXXXXXXXXXXX"
 OG_IMAGE = SITE + "/images/og-image.png"
 
@@ -306,7 +307,7 @@ def jsonld(meta):
             "image": [OG_IMAGE],
             "datePublished": meta["date"],
             "dateModified": meta.get("updated", meta["date"]),
-            "author": {"@type": "Person", "name": AUTHOR, "url": canonical("author.html"), "image": SITE + "/images/author-mario.jpg", "jobTitle": "Founder and editor", "worksFor": {"@id": SITE + "/#organization"}},
+            "author": {"@type": "Person", "name": AUTHOR, "url": canonical("author.html"), "image": SITE + "/images/author-mario.jpg", "sameAs": [AUTHOR_LINKEDIN], "jobTitle": "Founder and editor", "worksFor": {"@id": SITE + "/#organization"}},
             "publisher": org,
             "mainEntityOfPage": canonical(meta["path"]),
             "articleSection": meta["category"],
@@ -333,6 +334,7 @@ def jsonld(meta):
             "jobTitle": "Founder and editor",
             "image": SITE + "/images/author-mario.jpg",
             "url": canonical("author.html"),
+            "sameAs": [AUTHOR_LINKEDIN],
             "worksFor": {"@id": SITE + "/#organization"},
         }
     if t == "glossary":
