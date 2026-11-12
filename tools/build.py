@@ -14,7 +14,7 @@ CLEAN = "--html-links" not in sys.argv
 SITE = "https://unpackinsurance.com"
 BRAND = "UnpackInsurance"
 AUTHOR = "Mario González Ordóñez"
-AUTHOR_LINKEDIN = "https://www.linkedin.com/in/mario-gonz%C3%A1lez-ord%C3%B3%C3%B1ez-08722b44b"
+AUTHOR_LINKEDIN = "https://www.linkedin.com/in/mario-gonzalez-08722b44b"
 ADSENSE = "ca-pub-XXXXXXXXXXXXXXXX"
 OG_IMAGE = SITE + "/images/og-image.png"
 
