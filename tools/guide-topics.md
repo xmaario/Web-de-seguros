@@ -8,7 +8,7 @@ Order reviewed weekly against Search Console: topics next to clusters that alrea
 - [x] Comprehensive vs. Collision Coverage: What's the Difference? | comprehensive-vs-collision-coverage | Car insurance
 - [x] Upside Down on Your Car Loan? Your Options Explained | upside-down-car-loan | Car insurance
 - [x] Does Car Insurance Cover Uber and Lyft Driving? Rideshare Insurance Explained | rideshare-insurance-explained | Car insurance
-- [ ] How Long Does a Car Insurance Claim Take? | how-long-does-a-car-insurance-claim-take | Car insurance
+- [x] How Long Does a Car Insurance Claim Take? | how-long-does-a-car-insurance-claim-take | Car insurance
 - [ ] Liability Limits Explained: What 100/300/100 Means | liability-limits-explained | Car insurance
 - [ ] What Happens When Your Car Is Totaled? | what-happens-when-your-car-is-totaled | Car insurance
 - [ ] How to File a Home Insurance Claim, Step by Step | how-to-file-a-home-insurance-claim | Home insurance

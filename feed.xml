@@ -6,7 +6,15 @@
     <atom:link href="https://unpackinsurance.com/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Plain-English guides to US car and home insurance.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 11 Nov 2026 09:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 12 Nov 2026 09:00:00 +0000</lastBuildDate>
+    <item>
+      <title>How Long Does a Car Insurance Claim Take?</title>
+      <link>https://unpackinsurance.com/guides/how-long-does-a-car-insurance-claim-take</link>
+      <guid isPermaLink="true">https://unpackinsurance.com/guides/how-long-does-a-car-insurance-claim-take</guid>
+      <pubDate>Thu, 12 Nov 2026 09:00:00 +0000</pubDate>
+      <category>Car insurance</category>
+      <description>What affects how long a car insurance claim takes, the usual stages from first report to payment, and what you can do if your claim seems stuck.</description>
+    </item>
     <item>
       <title>Comprehensive vs. Collision Coverage: What&#x27;s the Difference?</title>
       <link>https://unpackinsurance.com/guides/comprehensive-vs-collision-coverage</link>
@@ -158,14 +166,6 @@
       <pubDate>Tue, 03 Nov 2026 09:00:00 +0000</pubDate>
       <category>Home insurance</category>
       <description>Understand the difference between replacement cost and actual cash value in home insurance, how depreciation affects claims, and how to choose.</description>
-    </item>
-    <item>
-      <title>What Is Full Coverage Car Insurance?</title>
-      <link>https://unpackinsurance.com/guides/what-is-full-coverage-car-insurance</link>
-      <guid isPermaLink="true">https://unpackinsurance.com/guides/what-is-full-coverage-car-insurance</guid>
-      <pubDate>Tue, 03 Nov 2026 09:00:00 +0000</pubDate>
-      <category>Car insurance</category>
-      <description>&quot;Full coverage&quot; is not an official policy type. Learn what it usually includes, what it leaves out, and when it may make sense to drop it.</description>
     </item>
   </channel>
 </rss>
