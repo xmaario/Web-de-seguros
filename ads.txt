@@ -1,3 +1,1 @@
-# Google AdSense authorized seller record.
-# After AdSense approval, replace this comment block with the exact line AdSense shows under Sites > ads.txt:
-# google.com, pub-YOUR_PUBLISHER_ID, DIRECT, f08c47fec0942fa0
+google.com, pub-1518517555331596, DIRECT, f08c47fec0942fa0

@@ -15,7 +15,7 @@ SITE = "https://unpackinsurance.com"
 BRAND = "UnpackInsurance"
 AUTHOR = "Mario González Ordóñez"
 AUTHOR_LINKEDIN = "https://www.linkedin.com/in/mario-gonzalez-08722b44b"
-ADSENSE = "ca-pub-XXXXXXXXXXXXXXXX"
+ADSENSE = "ca-pub-1518517555331596"
 OG_IMAGE = SITE + "/images/og-image.png"
 
 NAV = [
@@ -577,6 +577,7 @@ def render(meta):
   <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
   <meta name="color-scheme" content="light dark">
   <meta name="google-adsense-account" content="{ADSENSE}">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={ADSENSE}" crossorigin="anonymous"></script>
   <meta property="og:site_name" content="{BRAND}">
   <meta property="og:type" content="{og_type}">
   <meta property="og:title" content="{html.escape(title)}">

@@ -23,6 +23,10 @@ const AD_SLOTS = {
 
 const GA_MEASUREMENT_ID = "G-VHL5WR2798";
 
+// Set to true once the Google-certified consent message is published in
+// AdSense > Privacy & messaging. Until then, the site's own consent banner is used.
+const GOOGLE_CMP = false;
+
 (function () {
   "use strict";
 
@@ -41,7 +45,7 @@ const GA_MEASUREMENT_ID = "G-VHL5WR2798";
   var client = meta ? meta.getAttribute("content") : "";
 
   if (/^ca-pub-\d{16}$/.test(client)) {
-    loadScript(
+    if (!document.querySelector('script[src*="adsbygoogle.js"]')) loadScript(
       "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=" + client,
       { crossorigin: "anonymous" }
     );
@@ -132,7 +136,7 @@ const GA_MEASUREMENT_ID = "G-VHL5WR2798";
     document.body.appendChild(banner);
   }
 
-  if (!adsActive) {
+  if (!GOOGLE_CMP) {
     var stored = readChoice();
     if (stored) {
       applyChoice(stored);
@@ -145,7 +149,7 @@ const GA_MEASUREMENT_ID = "G-VHL5WR2798";
     var trigger = event.target.closest && event.target.closest("[data-privacy-settings]");
     if (!trigger) return;
     event.preventDefault();
-    if (adsActive) {
+    if (GOOGLE_CMP && adsActive) {
       window.googlefc.callbackQueue.push(function () {
         window.googlefc.showRevocationMessage();
       });
