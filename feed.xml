@@ -6,7 +6,15 @@
     <atom:link href="https://unpackinsurance.com/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Plain-English guides to US car and home insurance.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 16 Nov 2026 09:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 17 Nov 2026 09:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Liability Limits Explained: What 100/300/100 Means</title>
+      <link>https://unpackinsurance.com/guides/liability-limits-explained</link>
+      <guid isPermaLink="true">https://unpackinsurance.com/guides/liability-limits-explained</guid>
+      <pubDate>Tue, 17 Nov 2026 09:00:00 +0000</pubDate>
+      <category>Car insurance</category>
+      <description>What the three numbers in car insurance liability limits mean, how split and combined single limits work, and how to think about choosing yours.</description>
+    </item>
     <item>
       <title>How Long Does a Car Insurance Claim Take?</title>
       <link>https://unpackinsurance.com/guides/how-long-does-a-car-insurance-claim-take</link>
@@ -158,14 +166,6 @@
       <pubDate>Tue, 03 Nov 2026 09:00:00 +0000</pubDate>
       <category>Car insurance</category>
       <description>A step-by-step method for comparing car insurance quotes fairly: gather the right details, match coverage, read the fine print, and look past the price.</description>
-    </item>
-    <item>
-      <title>Replacement Cost vs. Actual Cash Value: What Homeowners Should Know</title>
-      <link>https://unpackinsurance.com/guides/replacement-cost-vs-actual-cash-value</link>
-      <guid isPermaLink="true">https://unpackinsurance.com/guides/replacement-cost-vs-actual-cash-value</guid>
-      <pubDate>Tue, 03 Nov 2026 09:00:00 +0000</pubDate>
-      <category>Home insurance</category>
-      <description>Understand the difference between replacement cost and actual cash value in home insurance, how depreciation affects claims, and how to choose.</description>
     </item>
   </channel>
 </rss>
