@@ -6,7 +6,15 @@
     <atom:link href="https://unpackinsurance.com/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Plain-English guides to US car and home insurance.</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 17 Nov 2026 09:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 19 Nov 2026 09:00:00 +0000</lastBuildDate>
+    <item>
+      <title>What Happens When Your Car Is Totaled?</title>
+      <link>https://unpackinsurance.com/guides/what-happens-when-your-car-is-totaled</link>
+      <guid isPermaLink="true">https://unpackinsurance.com/guides/what-happens-when-your-car-is-totaled</guid>
+      <pubDate>Thu, 19 Nov 2026 09:00:00 +0000</pubDate>
+      <category>Car insurance</category>
+      <description>How insurers decide a car is a total loss, how the payout is calculated, what happens with your loan and title, and what to do if the offer seems low.</description>
+    </item>
     <item>
       <title>Liability Limits Explained: What 100/300/100 Means</title>
       <link>https://unpackinsurance.com/guides/liability-limits-explained</link>
@@ -158,14 +166,6 @@
       <pubDate>Tue, 03 Nov 2026 09:00:00 +0000</pubDate>
       <category>Home insurance</category>
       <description>Renters insurance can protect your belongings, liability, and living expenses. Learn what it covers, what it excludes, and how to choose limits.</description>
-    </item>
-    <item>
-      <title>How to Compare Car Insurance Quotes Side by Side</title>
-      <link>https://unpackinsurance.com/guides/how-to-compare-car-insurance-quotes</link>
-      <guid isPermaLink="true">https://unpackinsurance.com/guides/how-to-compare-car-insurance-quotes</guid>
-      <pubDate>Tue, 03 Nov 2026 09:00:00 +0000</pubDate>
-      <category>Car insurance</category>
-      <description>A step-by-step method for comparing car insurance quotes fairly: gather the right details, match coverage, read the fine print, and look past the price.</description>
     </item>
   </channel>
 </rss>
