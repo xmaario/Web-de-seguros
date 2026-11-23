@@ -6,7 +6,15 @@
     <atom:link href="https://unpackinsurance.com/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Plain-English guides to US car and home insurance.</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 19 Nov 2026 09:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 23 Nov 2026 09:00:00 +0000</lastBuildDate>
+    <item>
+      <title>What Is Gap Insurance and Is It Worth It?</title>
+      <link>https://unpackinsurance.com/guides/what-is-gap-insurance</link>
+      <guid isPermaLink="true">https://unpackinsurance.com/guides/what-is-gap-insurance</guid>
+      <pubDate>Wed, 04 Nov 2026 09:00:00 +0000</pubDate>
+      <category>Car insurance</category>
+      <description>Gap insurance may cover the difference between your car loan or lease balance and the car&#x27;s value if it is totaled. Learn when it is worth it.</description>
+    </item>
     <item>
       <title>What Happens When Your Car Is Totaled?</title>
       <link>https://unpackinsurance.com/guides/what-happens-when-your-car-is-totaled</link>
@@ -30,14 +38,6 @@
       <pubDate>Thu, 12 Nov 2026 09:00:00 +0000</pubDate>
       <category>Car insurance</category>
       <description>What affects how long a car insurance claim takes, the usual stages from first report to payment, and what you can do if your claim seems stuck.</description>
-    </item>
-    <item>
-      <title>What Is Gap Insurance and Is It Worth It?</title>
-      <link>https://unpackinsurance.com/guides/what-is-gap-insurance</link>
-      <guid isPermaLink="true">https://unpackinsurance.com/guides/what-is-gap-insurance</guid>
-      <pubDate>Wed, 04 Nov 2026 09:00:00 +0000</pubDate>
-      <category>Car insurance</category>
-      <description>Gap insurance may cover the difference between your car loan or lease balance and the car&#x27;s value if it is totaled. Learn when it is worth it.</description>
     </item>
     <item>
       <title>Does Homeowners Insurance Cover Water Damage?</title>
