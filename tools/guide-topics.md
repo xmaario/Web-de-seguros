@@ -34,3 +34,6 @@ Order reviewed weekly against Search Console: topics next to clusters that alrea
 - [ ] Why Was My Homeowners Insurance Nonrenewed? | homeowners-insurance-nonrenewal | Home insurance
 - [ ] Moving to Another State: What Happens to Your Car Insurance? | car-insurance-when-moving-states | Car insurance
 - [ ] Does Homeowners Insurance Cover Theft Away From Home? | homeowners-insurance-theft-away-from-home | Home insurance
+
+## Ideas (not guides yet)
+- Insurance basics quiz for students (GSC 2026-11-23: students paste financial-literacy quiz questions, e.g. renters vs landlord insurance). Could be a tool page like the gap quiz; good fit for library outreach.
