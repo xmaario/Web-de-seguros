@@ -144,12 +144,12 @@ Drafts are created with a [LINK] placeholder; the owner pastes https://unpackins
 
 | Date drafted | Site | Page | Contact | Status |
 |---|---|---|---|---|
-| 2026-11-12 | UW-Whitewater Andersen Library | Financial Literacy guide, Understanding Insurance | refdesk@uww.edu | Sent 2026-11-12 |
-| 2026-11-12 | Green River College Library | Financial Literacy guide | librarian@greenriver.edu | Sent 2026-11-12 |
-| 2026-11-12 | Mendocino College Library | Financial Literacy guide | librarian@mendocino.edu | Sent 2026-11-12 |
-| 2026-11-12 | Flint Hills Technical College | Financial Literacy Resources guide | lworthen@fhtc.edu | Sent 2026-11-12 |
+| 2026-11-12 | UW-Whitewater Andersen Library | Financial Literacy guide, Understanding Insurance | refdesk@uww.edu | Sent 2026-11-12; no reply, follow-up drafted 2026-11-23 |
+| 2026-11-12 | Green River College Library | Financial Literacy guide | librarian@greenriver.edu | Sent 2026-11-12; no reply, follow-up drafted 2026-11-23 |
+| 2026-11-12 | Mendocino College Library | Financial Literacy guide | librarian@mendocino.edu | Sent 2026-11-12; no reply, follow-up drafted 2026-11-23 |
+| 2026-11-12 | Flint Hills Technical College | Financial Literacy Resources guide | lworthen@fhtc.edu | Sent 2026-11-12; no reply, follow-up drafted 2026-11-23 |
 | 2026-11-12 | Clinton Public Library (Iowa) | Financial Resources page | reference@clintonpubliclibrary.us | Bounced (group only accepts internal senders). Try another contact |
-| 2026-11-12 | Miami Public Library (Oklahoma) | Financial Literacy page | librarystaff@miamiokla.net | Sent 2026-11-12 (link sent in a follow-up) |
+| 2026-11-12 | Miami Public Library (Oklahoma) | Financial Literacy page | librarystaff@miamiokla.net | Sent 2026-11-12 (link sent in a follow-up); no reply, follow-up drafted 2026-11-23 |
 
 Next candidates: Cal State East Bay Personal Finance guide (libhelp@csueastbay.libanswers.com),
 Boston College Personal Finance guide (email via guide), Atlanta University Center Financial Literacy guide (business librarian),
