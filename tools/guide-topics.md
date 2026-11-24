@@ -11,7 +11,7 @@ Order reviewed weekly against Search Console: topics next to clusters that alrea
 - [x] How Long Does a Car Insurance Claim Take? | how-long-does-a-car-insurance-claim-take | Car insurance
 - [x] Liability Limits Explained: What 100/300/100 Means | liability-limits-explained | Car insurance
 - [x] What Happens When Your Car Is Totaled? | what-happens-when-your-car-is-totaled | Car insurance
-- [ ] How to File a Home Insurance Claim, Step by Step | how-to-file-a-home-insurance-claim | Home insurance
+- [x] How to File a Home Insurance Claim, Step by Step | how-to-file-a-home-insurance-claim | Home insurance
 - [ ] What to Say (and Not Say) to an Insurance Adjuster | what-to-say-to-an-insurance-adjuster | Car insurance
 - [ ] Are You Underinsured? How to Tell if Your Car or Home Coverage Is Enough | are-you-underinsured | Car insurance
 - [ ] How Much Homeowners Insurance Do You Need? | how-much-homeowners-insurance-do-you-need | Home insurance

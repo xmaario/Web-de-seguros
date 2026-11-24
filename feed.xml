@@ -6,7 +6,15 @@
     <atom:link href="https://unpackinsurance.com/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Plain-English guides to US car and home insurance.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 23 Nov 2026 09:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 24 Nov 2026 09:00:00 +0000</lastBuildDate>
+    <item>
+      <title>How to File a Home Insurance Claim, Step by Step</title>
+      <link>https://unpackinsurance.com/guides/how-to-file-a-home-insurance-claim</link>
+      <guid isPermaLink="true">https://unpackinsurance.com/guides/how-to-file-a-home-insurance-claim</guid>
+      <pubDate>Tue, 24 Nov 2026 09:00:00 +0000</pubDate>
+      <category>Home insurance</category>
+      <description>A step-by-step guide to filing a home insurance claim: protecting your home, documenting damage, working with the adjuster, and understanding the payout.</description>
+    </item>
     <item>
       <title>What Is Gap Insurance and Is It Worth It?</title>
       <link>https://unpackinsurance.com/guides/what-is-gap-insurance</link>
@@ -158,14 +166,6 @@
       <pubDate>Wed, 04 Nov 2026 09:00:00 +0000</pubDate>
       <category>Home insurance</category>
       <description>Umbrella insurance adds liability protection above your home and auto policies. Learn what it covers, what it excludes, and who may need it.</description>
-    </item>
-    <item>
-      <title>Renters Insurance Basics: What It Covers and How Much You Need</title>
-      <link>https://unpackinsurance.com/guides/renters-insurance-basics</link>
-      <guid isPermaLink="true">https://unpackinsurance.com/guides/renters-insurance-basics</guid>
-      <pubDate>Tue, 03 Nov 2026 09:00:00 +0000</pubDate>
-      <category>Home insurance</category>
-      <description>Renters insurance can protect your belongings, liability, and living expenses. Learn what it covers, what it excludes, and how to choose limits.</description>
     </item>
   </channel>
 </rss>
