@@ -37,3 +37,6 @@ Order reviewed weekly against Search Console: topics next to clusters that alrea
 
 ## Ideas (not guides yet)
 - Insurance basics quiz for students (GSC 2026-11-23: students paste financial-literacy quiz questions, e.g. renters vs landlord insurance). Could be a tool page like the gap quiz; good fit for library outreach.
+
+## SEO change log (measure 7 days after)
+- 2026-11-24: deductibles guide new meta description (CTR test: pos 1-3, 0 clicks). Liability calculator title -> "Liability Insurance Calculator: How Much Do I Need?" (was competing with /tools). Rideshare FAQ "Does rideshare insurance cover my passengers?" (query at pos 7). Footer now links liability limits, compare quotes, rideshare, home claim (instead of how-much, full coverage, flood). Check on 2026-12-01.
