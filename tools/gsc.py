@@ -17,7 +17,7 @@ end = datetime.date.today()
 body = {"startDate": str(end - datetime.timedelta(days=days)), "endDate": str(end),
         "dimensions": dims, "dataState": "all", "rowLimit": 1000}
 req = urllib.request.Request("https://unpackinsurance.com/api/gsc", data=json.dumps(body).encode(),
-                             headers={"Content-Type": "application/json"}, method="POST")
+                             headers={"Content-Type": "application/json", "User-Agent": "unpack-gsc-report/1.0"}, method="POST")
 rows = json.load(urllib.request.urlopen(req, timeout=60)).get("rows", [])
 rows.sort(key=lambda r: r["keys"] if dims == ["date"] else [-r["impressions"]])
 for r in rows:
