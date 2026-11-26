@@ -151,6 +151,9 @@ Drafts are created with a [LINK] placeholder; the owner pastes https://unpackins
 | 2026-11-12 | Clinton Public Library (Iowa) | Financial Resources page | reference@clintonpubliclibrary.us | Bounced (group only accepts internal senders). Try another contact |
 | 2026-11-12 | Miami Public Library (Oklahoma) | Financial Literacy page | librarystaff@miamiokla.net | Sent 2026-11-12 (link sent in a follow-up); no reply, follow-up sent 2026-11-26 (from mario@) |
 
+| 2026-11-27 | Reynolds Community College Library | Personal Finance guide | library@reynolds.edu | Drafted ([LINK] = state minimums page) |
+| 2026-11-27 | Metropolitan College of New York Library | Financial life cycle guide | library@mcny.edu | Drafted ([LINK] = state minimums page) |
+| 2026-11-27 | Cal State East Bay Library | Personal Finance guide | libhelp@csueastbay.libanswers.com | Drafted ([LINK] = state minimums page) |
 Next candidates: Cal State East Bay Personal Finance guide (libhelp@csueastbay.libanswers.com),
 Boston College Personal Finance guide (email via guide), Atlanta University Center Financial Literacy guide (business librarian),
 Elizabethtown CTC Financial Literacy guide (Katie Meyer).
