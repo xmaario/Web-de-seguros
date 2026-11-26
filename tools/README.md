@@ -38,3 +38,8 @@ This folder is excluded from the live site by `.assetsignore`.
 - Callout boxes: guides may include 1-2 callouts where they genuinely help, e.g.
   `<aside class="callout tip"><span class="callout-title">Tip</span><p>…</p></aside>`
   (classes: `tip`, `warn` with title "Watch out", `example` with title "Example"). Examples must be clearly illustrative.
+
+## Make every guide different (audit 2026-11-26)
+Google left one guide "crawled, not indexed" because it added nothing new. Every new guide must include at least one thing a generic article lacks:
+concrete situations ("If you..., then..."), a decision table, or a checklist of exact questions to ask the insurer.
+Prefer specific questions people search ("Does car insurance cover X?") over broad topics that big sites dominate.
