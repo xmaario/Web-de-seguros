@@ -155,3 +155,9 @@ Next candidates: Cal State East Bay Personal Finance guide (libhelp@csueastbay.l
 Boston College Personal Finance guide (email via guide), Atlanta University Center Financial Literacy guide (business librarian),
 Elizabethtown CTC Financial Literacy guide (Katie Meyer).
 Skipped: Middletown Thrall Library (no public email, only a form).
+
+## Batch 2 candidates (2026-11-27), hook: state minimums table
+- NYPL Personal Finance guide, Insurance page: https://libguides.nypl.org/personalfinance/Insurance_Auto_Life_PropertyCasualty_Health (contact via guide owner box)
+- UNH Financial Literacy, Insurance: https://libraryguides.unh.edu/finlit/insurance
+- Skidmore "Adulting" guide, Cars: https://libguides.skidmore.edu/adulting/cars
+- Skip credit unions: most sell their own GAP products, low fit for linking to our quiz.
