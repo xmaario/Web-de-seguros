@@ -6,7 +6,15 @@
     <atom:link href="https://unpackinsurance.com/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Plain-English guides to US car and home insurance.</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 24 Nov 2026 09:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 26 Nov 2026 09:00:00 +0000</lastBuildDate>
+    <item>
+      <title>What to Say (and Not Say) to an Insurance Adjuster</title>
+      <link>https://unpackinsurance.com/guides/what-to-say-to-an-insurance-adjuster</link>
+      <guid isPermaLink="true">https://unpackinsurance.com/guides/what-to-say-to-an-insurance-adjuster</guid>
+      <pubDate>Thu, 26 Nov 2026 09:00:00 +0000</pubDate>
+      <category>Car insurance</category>
+      <description>How to talk to an insurance adjuster after a car accident: what to say, what to avoid, recorded statements, and how to keep your claim on track.</description>
+    </item>
     <item>
       <title>How to File a Home Insurance Claim, Step by Step</title>
       <link>https://unpackinsurance.com/guides/how-to-file-a-home-insurance-claim</link>
@@ -158,14 +166,6 @@
       <pubDate>Wed, 04 Nov 2026 09:00:00 +0000</pubDate>
       <category>Home insurance</category>
       <description>How condo insurance (HO-6) works alongside your association&#x27;s master policy, what it covers, how to choose limits, and why loss assessment coverage matters.</description>
-    </item>
-    <item>
-      <title>What Is Umbrella Insurance and Do You Need It?</title>
-      <link>https://unpackinsurance.com/guides/what-is-umbrella-insurance</link>
-      <guid isPermaLink="true">https://unpackinsurance.com/guides/what-is-umbrella-insurance</guid>
-      <pubDate>Wed, 04 Nov 2026 09:00:00 +0000</pubDate>
-      <category>Home insurance</category>
-      <description>Umbrella insurance adds liability protection above your home and auto policies. Learn what it covers, what it excludes, and who may need it.</description>
     </item>
   </channel>
 </rss>
