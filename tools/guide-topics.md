@@ -22,7 +22,7 @@ Strategy (audit 2026-11-26): prefer specific, lower-competition questions ("Does
 - [ ] Are You Underinsured? How to Tell if Your Car or Home Coverage Is Enough | are-you-underinsured | Car insurance
 - [ ] Is Gap Insurance Required? Lender and Lease Rules | is-gap-insurance-required | Car insurance
 - [ ] How to Insure a Car You Just Bought: Title, Timing and Permit Drivers | how-to-insure-a-car-you-just-bought | Car insurance
-- [ ] State Minimum Car Insurance: Why It May Not Be Enough | state-minimum-car-insurance | Car insurance
+- [x] State Minimum Car Insurance: Why It May Not Be Enough | state-minimum-car-insurance | Car insurance
 - [ ] Uninsured Motorist Coverage Explained | uninsured-motorist-coverage-explained | Car insurance
 - [ ] What Is Personal Injury Protection (PIP)? | what-is-personal-injury-protection | Car insurance
 - [ ] Does Homeowners Insurance Cover Mold? | does-homeowners-insurance-cover-mold | Home insurance
