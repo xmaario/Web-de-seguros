@@ -2,7 +2,8 @@
  * Static pages are served straight from the assets. Only /api/* runs this code.
  * POST /api/contact: validates the contact form and emails it to the site owner
  * through Cloudflare Email Routing (send_email binding, fixed verified destination).
- * POST /api/gsc: private, read-only Search Console report for the site owner.
+ * POST /api/gsc: private, read-only Search Console report for the site owner
+ *   (search analytics query, or {"inspect": url} for URL Inspection).
  *   Needs secrets GSC_KEY (Google service account JSON with Restricted access in
  *   Search Console) and STATS_TOKEN (sent by the caller in the X-Stats-Token header). */
 
@@ -132,6 +133,15 @@ async function handleGsc(request, env) {
   }
   try {
     const token = await googleAccessToken(env);
+    if (query.inspect) {
+      // URL Inspection API: index status of one page.
+      const r = await fetch("https://searchconsole.googleapis.com/v1/urlInspection/index:inspect", {
+        method: "POST",
+        headers: { Authorization: `Bearer ${token}`, "Content-Type": "application/json" },
+        body: JSON.stringify({ inspectionUrl: String(query.inspect), siteUrl: GSC_SITE }),
+      });
+      return json(r.status, await r.json());
+    }
     const res = await fetch(`https://www.googleapis.com/webmasters/v3/sites/${encodeURIComponent(GSC_SITE)}/searchAnalytics/query`, {
       method: "POST",
       headers: { Authorization: `Bearer ${token}`, "Content-Type": "application/json" },
