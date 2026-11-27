@@ -6,7 +6,15 @@
     <atom:link href="https://unpackinsurance.com/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Plain-English guides to US car and home insurance.</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 26 Nov 2026 09:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 27 Nov 2026 09:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Does Car Insurance Cover a Cracked Windshield?</title>
+      <link>https://unpackinsurance.com/guides/does-car-insurance-cover-windshield-damage</link>
+      <guid isPermaLink="true">https://unpackinsurance.com/guides/does-car-insurance-cover-windshield-damage</guid>
+      <pubDate>Fri, 27 Nov 2026 09:00:00 +0000</pubDate>
+      <category>Car insurance</category>
+      <description>When car insurance pays for a chipped or cracked windshield, which coverage applies, how deductibles and full glass coverage work, and what to ask first.</description>
+    </item>
     <item>
       <title>What to Say (and Not Say) to an Insurance Adjuster</title>
       <link>https://unpackinsurance.com/guides/what-to-say-to-an-insurance-adjuster</link>
@@ -158,14 +166,6 @@
       <pubDate>Wed, 04 Nov 2026 09:00:00 +0000</pubDate>
       <category>Car insurance</category>
       <description>How long accidents, tickets, and claims can affect your car insurance, how your driving record differs from claims history, and how to check both.</description>
-    </item>
-    <item>
-      <title>Does Homeowners Insurance Cover Roof Damage?</title>
-      <link>https://unpackinsurance.com/guides/does-homeowners-insurance-cover-roof-damage</link>
-      <guid isPermaLink="true">https://unpackinsurance.com/guides/does-homeowners-insurance-cover-roof-damage</guid>
-      <pubDate>Wed, 04 Nov 2026 09:00:00 +0000</pubDate>
-      <category>Home insurance</category>
-      <description>When homeowners insurance may cover roof damage from storms, hail, or fallen trees, when it does not, and how roof age affects your payout.</description>
     </item>
   </channel>
 </rss>

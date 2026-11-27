@@ -14,7 +14,7 @@ Strategy (audit 2026-11-26): prefer specific, lower-competition questions ("Does
 - [x] What Happens When Your Car Is Totaled? | what-happens-when-your-car-is-totaled | Car insurance
 - [x] How to File a Home Insurance Claim, Step by Step | how-to-file-a-home-insurance-claim | Home insurance
 - [x] What to Say (and Not Say) to an Insurance Adjuster | what-to-say-to-an-insurance-adjuster | Car insurance
-- [ ] Does Car Insurance Cover a Cracked Windshield? | does-car-insurance-cover-windshield-damage | Car insurance
+- [x] Does Car Insurance Cover a Cracked Windshield? | does-car-insurance-cover-windshield-damage | Car insurance
 - [ ] Someone Else Crashed My Car: Whose Insurance Pays? | someone-else-drives-my-car | Car insurance
 - [ ] Should You File a Claim for a Minor Accident? | should-you-file-a-claim-for-a-minor-accident | Car insurance
 - [ ] Does Homeowners Insurance Cover a Fallen Tree? | does-homeowners-insurance-cover-fallen-trees | Home insurance
